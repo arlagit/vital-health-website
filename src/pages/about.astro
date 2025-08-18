@@ -1,0 +1,214 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+
+
+
+const values = [
+  {
+    title: 'Evidence-Based Care',
+    description: 'All our treatments and recommendations are based on the latest medical research and clinical guidelines.',
+    icon: 'book-open'
+  },
+  {
+    title: 'Patient-Centered Approach',
+    description: 'We believe in treating the whole person, not just symptoms, and work collaboratively with patients to achieve their health goals.',
+    icon: 'users'
+  },
+  {
+    title: 'Transparent Communication',
+    description: 'Clear, honest communication about treatment options, costs, and expected outcomes is fundamental to our practice.',
+    icon: 'message-circle'
+  },
+  {
+    title: 'Continuous Improvement',
+    description: 'We regularly review and update our practices based on new research and patient feedback to provide the best possible care.',
+    icon: 'trending-up'
+  }
+];
+---
+
+<Layout title="About Us" description="Meet our qualified NZ doctors, all MCNZ registered, and learn about our evidence-based approach to telehealth lifestyle medicine.">
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-primary section-padding">
+    <div class="container-max text-center">
+      <h1 class="text-4xl lg:text-6xl font-bold text-neutral-900 mb-6">
+        About Vital Health
+      </h1>
+      <p class="text-xl lg:text-2xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
+        We're a team of qualified, MCNZ-registered doctors dedicated to making quality healthcare accessible, 
+        convenient, and effective for busy Kiwis through telehealth.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-6">
+            Our Mission
+          </h2>
+          <p class="text-lg text-neutral-600 mb-6 leading-relaxed">
+            To provide doctor-led telehealth that actually fits real life. We help with weight, men's performance, 
+            sleep, and heart risk—starting with a proper check, clear targets, and regular reviews.
+          </p>
+          <p class="text-lg text-neutral-600 leading-relaxed">
+            We believe that quality healthcare shouldn't require rearranging your life. Our telehealth platform 
+            brings experienced, qualified doctors to you, wherever you are, whenever you need them.
+          </p>
+        </div>
+        
+        <div class="bg-primary-50 rounded-2xl p-8">
+          <h3 class="text-2xl font-bold text-neutral-900 mb-4">Our Approach</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start space-x-3">
+              <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <span class="text-neutral-700">Comprehensive health assessments</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <span class="text-neutral-700">Personalized treatment plans</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <span class="text-neutral-700">Ongoing support and monitoring</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <div class="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <span class="text-neutral-700">Evidence-based interventions</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Our Values -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          Our Values
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          The principles that guide everything we do
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {values.map((value) => (
+          <div class="card">
+            <div class="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {value.icon === 'book-open' && (
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 5.477 5.754 5 7.5 5s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C20.832 18.477 19.246 18 17.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                )}
+                {value.icon === 'users' && (
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/>
+                )}
+                {value.icon === 'message-circle' && (
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                )}
+                {value.icon === 'trending-up' && (
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                )}
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-3">{value.title}</h3>
+            <p class="text-neutral-600 leading-relaxed">{value.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section-padding bg-neutral-50">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          Why Choose Vital Health?
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">MCNZ Registered</h3>
+          <p class="text-neutral-600">
+            All our doctors are registered with the Medical Council of New Zealand and maintain the highest standards of medical practice.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Secure & Private</h3>
+          <p class="text-neutral-600">
+            Our platform is HIPAA compliant with enterprise-grade security to protect your sensitive medical information.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Evidence-Based</h3>
+          <p class="text-neutral-600">
+            All our treatments and recommendations are based on the latest medical research and clinical guidelines.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-primary-600">
+    <div class="container-max text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+        Ready to Get Started?
+      </h2>
+      <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+        Book your first consultation with one of our qualified doctors and take the first step towards better health.
+      </p>
+      <a href="/contact" class="btn-accent text-lg px-8 py-4">
+        Book Your Consultation
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

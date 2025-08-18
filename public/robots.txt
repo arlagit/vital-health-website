@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Block any admin or backend paths
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.well-known/
+
+# Allow all search engines to access sitemap
+Sitemap: https://vitalhealth.nz/sitemap-index.xml
+
+# Medical content should be crawlable
+Allow: /services/
+Allow: /blog/
+Allow: /glp-1/
+Allow: /wegovy/
+Allow: /locations/

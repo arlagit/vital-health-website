@@ -1,0 +1,183 @@
+---
+export interface Props {
+  slug: string;
+  alt: string;
+  title: string;
+  keywords?: string[];
+  caption?: string;
+  priority?: boolean;
+  className?: string;
+}
+
+const { slug, alt, title, keywords = [], caption, priority = false, className = "" } = Astro.props;
+
+// Generate SEO-optimized alt text with target keywords
+const seoAlt = keywords.length > 0 
+  ? `${alt} - ${keywords.slice(0, 3).join(', ')} guide for New Zealand patients by Vital Health`
+  : `${alt} - New Zealand weight loss medication guide by Vital Health`;
+
+// Generate SEO-friendly title attribute
+const seoTitle = `${title} | Vital Health NZ - Expert Weight Loss Treatment`;
+
+// Generate keywords for schema markup
+const imageKeywords = keywords.length > 0 
+  ? [...keywords, 'New Zealand', 'Vital Health', 'telehealth', 'weight loss'].join(', ')
+  : 'weight loss, GLP-1, New Zealand, Vital Health, telehealth';
+
+// Generate responsive image paths
+const desktopWebP = `/blog/images/desktop/${slug}.webp`;
+const desktopJpeg = `/blog/images/desktop/${slug}.jpg`;
+const mobileWebP = `/blog/images/mobile/${slug}.webp`;
+const mobileJpeg = `/blog/images/mobile/${slug}.jpg`;
+const thumbnailWebP = `/blog/images/thumbnails/${slug}.webp`;
+const thumbnailJpeg = `/blog/images/thumbnails/${slug}.jpg`;
+const socialWebP = `/blog/images/social/${slug}.webp`;
+
+// Fallback to current blog structure if optimized images don't exist
+const fallbackImage = `/blog/${slug}.jpg`;
+---
+
+<figure class={`blog-image-container ${className}`}>
+  <picture>
+    <!-- Desktop: 1200x630 -->
+    <source 
+      media="(min-width: 1200px)" 
+      srcset={socialWebP}
+      type="image/webp"
+      width="1200" 
+      height="630">
+    <source 
+      media="(min-width: 1200px)" 
+      srcset={socialWebP}
+      width="1200" 
+      height="630">
+    
+    <!-- Tablet: 1200x630 -->
+    <source 
+      media="(min-width: 768px)" 
+      srcset={socialWebP}
+      type="image/webp"
+      width="1200" 
+      height="630">
+    <source 
+      media="(min-width: 768px)" 
+      srcset={socialWebP}
+      width="1200" 
+      height="630">
+    
+    <!-- Mobile: 400x225 -->
+    <source 
+      srcset={socialWebP}
+      type="image/webp"
+      width="1200" 
+      height="630">
+    
+    <!-- Fallback -->
+    <img 
+      src={socialWebP}
+      alt={seoAlt}
+      title={seoTitle}
+      loading={priority ? "eager" : "lazy"}
+      decoding="async"
+      width="400" 
+      height="225"
+      class="blog-featured-image"
+      onerror={`this.src='${fallbackImage}'; this.onerror=null;`}
+      itemprop="image">
+  </picture>
+  
+  {caption && (
+    <figcaption class="image-caption text-sm text-neutral-600 mt-2 text-center italic">
+      {caption}
+    </figcaption>
+  )}
+</figure>
+
+<!-- Enhanced Schema markup for SEO -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "@id": `https://vitalhealth.nz/blog/images/social/${slug}.webp`,
+  "url": `https://vitalhealth.nz${socialWebP}`,
+  "contentUrl": `https://vitalhealth.nz${socialWebP}`,
+  "width": 1200,
+  "height": 630,
+  "name": seoTitle,
+  "alternateName": title,
+  "caption": caption || seoAlt,
+  "description": seoAlt,
+  "keywords": imageKeywords,
+  "encodingFormat": "image/webp",
+  "uploadDate": new Date().toISOString().split('T')[0],
+  "author": {
+    "@type": "Organization",
+    "name": "Vital Health NZ",
+    "url": "https://vitalhealth.nz"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vital Health NZ",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://vitalhealth.nz/images/logos/Vital-Health-Logo.png"
+    }
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Vital Health NZ"
+  },
+  "license": "https://vitalhealth.nz/terms",
+  "acquireLicensePage": "https://vitalhealth.nz/contact",
+  "creditText": "Vital Health NZ - Expert Weight Loss Treatment",
+  "isAccessibleForFree": true,
+  "usageInfo": "Educational content about weight loss medication in New Zealand"
+})} />
+
+<style>
+.blog-image-container {
+  @apply w-full mb-6;
+}
+
+.blog-featured-image {
+  @apply w-full h-auto rounded-lg shadow-md;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-featured-image:hover {
+  @apply transform scale-105 shadow-lg;
+}
+
+.image-caption {
+  @apply max-w-prose mx-auto;
+}
+
+/* Ensure images maintain aspect ratio */
+@supports (aspect-ratio: 16/9) {
+  .blog-featured-image {
+    height: auto;
+  }
+}
+
+/* Fallback for older browsers */
+@supports not (aspect-ratio: 16/9) {
+  .blog-featured-image {
+    height: auto;
+    min-height: 200px;
+  }
+}
+
+/* Loading state */
+.blog-featured-image[loading="lazy"] {
+  @apply bg-neutral-200;
+}
+
+/* Print optimization */
+@media print {
+  .blog-featured-image {
+    @apply shadow-none;
+    break-inside: avoid;
+  }
+}
+</style>

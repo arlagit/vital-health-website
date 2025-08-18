@@ -1,0 +1,117 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const assessments = [
+  'Cardiovascular risk factor evaluation',
+  'Metabolic health screening',
+  'Blood pressure and cholesterol monitoring',
+  'Diabetes risk assessment',
+  'Lifestyle and family history review',
+  'Advanced cardiac biomarker testing'
+];
+
+const interventions = [
+  'Personalized prevention strategies',
+  'Lifestyle modification coaching',
+  'Medication management when needed',
+  'Regular health monitoring',
+  'Cardiovascular fitness planning',
+  'Nutrition and exercise guidance'
+];
+---
+
+<Layout title="Heart & Metabolic Risk" description="Comprehensive cardiovascular and metabolic health assessment with personalised prevention and treatment plans.">
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-purple-50 to-purple-100 section-padding">
+    <div class="container-max text-center">
+      <h1 class="text-4xl lg:text-6xl font-bold text-neutral-900 mb-6">
+        Heart & Metabolic Health
+      </h1>
+      <p class="text-xl lg:text-2xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
+        Comprehensive cardiovascular and metabolic health assessment using advanced screening tools 
+        and risk stratification to prevent heart disease and diabetes.
+      </p>
+      <div class="mt-8">
+        <a href="/contact" class="btn-primary text-lg px-8 py-4">
+          Book Your Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Risk Assessment -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          Comprehensive Risk Assessment
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          Advanced screening and evaluation to identify and manage your cardiovascular and metabolic risks
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {assessments.map((assessment) => (
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <span class="text-lg text-neutral-700">{assessment}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Interventions -->
+  <section class="section-padding bg-gradient-primary">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          Prevention & Treatment Strategies
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          Evidence-based interventions to reduce your risk and improve your cardiovascular health
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {interventions.map((intervention) => (
+          <div class="card">
+            <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-3">{intervention}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-purple-600">
+    <div class="container-max text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+        Protect Your Heart Health
+      </h2>
+      <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+        Book your consultation with our cardiovascular specialist and take proactive steps to protect your heart.
+      </p>
+      <a href="/contact" class="btn-accent text-lg px-8 py-4">
+        Book Consultation
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+

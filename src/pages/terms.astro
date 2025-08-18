@@ -1,0 +1,145 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Terms of Service";
+const pageDescription = "Terms and conditions for using Vital Health NZ telehealth services.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-primary section-padding">
+    <div class="container-max text-center">
+      <h1 class="text-4xl lg:text-6xl font-bold text-neutral-900 mb-6">
+        Terms of Service
+      </h1>
+              <p class="text-xl lg:text-2xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
+          Please read these terms carefully before using our telehealth services
+        </p>
+    </div>
+  </section>
+
+  <!-- Terms Content -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="max-w-4xl mx-auto prose prose-lg">
+        <h2>Acceptance of Terms</h2>
+        <p>
+          By accessing and using Vital Health NZ's telehealth services, you accept and agree to be bound by 
+          these Terms of Service. If you do not agree to these terms, please do not use our services.
+        </p>
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>
+          By accessing or using our website, joining our waitlist, or interacting with our services, 
+          you agree to be bound by these Terms. If you disagree with any part of these terms, 
+          you may not access our services.
+        </p>
+
+        <h3>Service Description</h3>
+        <p>
+          Vital Health NZ provides telehealth medical consultations for weight management, men's health, 
+          sleep health, and heart & metabolic risk assessment. Our services are delivered by qualified, 
+          MCNZ-registered doctors through secure video consultations.
+        </p>
+
+        <h3>Eligibility</h3>
+        <p>To use our services, you must:</p>
+        <ul>
+          <li>Be at least 18 years old</li>
+          <li>Be located in New Zealand during consultations</li>
+          <li>Have a valid email address and phone number</li>
+          <li>Have access to appropriate technology for video consultations</li>
+          <li>Provide accurate and complete health information</li>
+        </ul>
+
+        <h3>Medical Disclaimer</h3>
+        <p>
+          <strong>Important:</strong> Our telehealth services are not a substitute for emergency medical care. 
+          If you are experiencing a medical emergency, please call 111 or go to your nearest emergency department.
+        </p>
+        <p>
+          While our doctors are qualified and experienced, telehealth may not be appropriate for all medical 
+          conditions. Our doctors will assess whether telehealth is suitable for your specific health concerns.
+        </p>
+
+        <h3>Appointment Cancellation Policy</h3>
+        <p>
+          We require 24 hours notice for appointment cancellations or rescheduling. Late cancellations or 
+          no-shows may result in a cancellation fee. We understand that emergencies happen and will work 
+          with you on a case-by-case basis.
+        </p>
+
+        <h3>Payment Terms</h3>
+        <p>
+          Payment is required at the time of booking or before your consultation. We accept major credit 
+          cards and online payment methods. All fees are in New Zealand dollars and are non-refundable 
+          except as required by law.
+        </p>
+
+        <h3>User Responsibilities</h3>
+        <p>You agree to:</p>
+        <ul>
+          <li>Provide accurate and complete health information</li>
+          <li>Participate actively in your consultations</li>
+          <li>Follow prescribed treatment plans and recommendations</li>
+          <li>Maintain the confidentiality of your login credentials</li>
+          <li>Use our services only for their intended purpose</li>
+          <li>Not attempt to access other users' information</li>
+        </ul>
+
+        <h3>Limitation of Liability</h3>
+        <p>
+          Vital Health NZ's liability is limited to the amount paid for the specific service in question. 
+          We are not liable for indirect, incidental, or consequential damages arising from the use of 
+          our services.
+        </p>
+
+        <h3>Intellectual Property</h3>
+        <p>
+          All content on our website, including text, graphics, logos, and software, is the property of 
+          Vital Health NZ and is protected by copyright and other intellectual property laws.
+        </p>
+
+        <h3>Privacy and Data Protection</h3>
+        <p>
+          Your privacy is important to us. Please review our Privacy Policy to understand how we collect, 
+          use, and protect your information. By using our services, you consent to our privacy practices.
+        </p>
+
+        <h3>Changes to Terms</h3>
+        <p>
+          We may update these Terms of Service from time to time. We will notify you of any material changes 
+          by posting the new terms on our website and updating the effective date.
+        </p>
+
+        <h3>Governing Law</h3>
+        <p>
+          These Terms of Service are governed by the laws of New Zealand. Any disputes will be resolved 
+          in the courts of New Zealand.
+        </p>
+
+        <h3>Contact Information</h3>
+        <p>
+          If you have questions about these Terms of Service, please contact us at:
+        </p>
+        <div class="bg-neutral-50 rounded-lg p-6">
+          <p><strong>Email:</strong> legal@vitalhealth.nz</p>
+          <p><strong>Phone:</strong> <a href="tel:+64-9-123-4567" class="text-primary-600 hover:text-primary-700">+64 9 123 4567</a></p>
+          <p><strong>Address:</strong> Vital Health NZ, Auckland, New Zealand</p>
+          <p><strong>Response Time:</strong> We aim to respond within 5 business days</p>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+

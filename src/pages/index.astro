@@ -1,16 +1,420 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 
+const services = [
+  {
+    title: 'GLP-1 Weight Loss Treatment',
+    description: 'Evidence-based GLP-1 medications combined with personalised lifestyle medicine support for optimal results.',
+    icon: 'scale',
+    href: '/services/weight-management',
+    color: 'from-accent-500 to-accent-600',
+    image: '/images/services/weight-management.jpg'
+  },
+  {
+    title: 'Lifestyle Medicine Plans',
+    description: 'Comprehensive nutrition, exercise, stress management, and behavioural change strategies that work alongside medication.',
+    icon: 'heart',
+    href: '/services/lifestyle-medicine',
+    color: 'from-primary-500 to-primary-600',
+    image: '/images/services/lifestyle-medicine.jpg'
+  },
+  {
+    title: 'Medical Supervision',
+    description: 'Ongoing medical monitoring and lifestyle coaching from qualified NZ doctors throughout your treatment journey.',
+    icon: 'shield-check',
+    href: '/services/medical-supervision',
+    color: 'from-secondary-500 to-secondary-600',
+    image: '/images/services/medical-supervision.jpg'
+  },
+  {
+    title: 'Progress Tracking',
+    description: 'Regular assessments, measurements, and lifestyle adjustments to ensure optimal results and long-term success.',
+    icon: 'chart-bar',
+    href: '/services/progress-tracking',
+    color: 'from-purple-500 to-purple-600',
+    image: '/images/services/progress-tracking.jpg'
+  }
+];
+
+const faqs = [
+  {
+    question: 'What are GLP-1 medications?',
+    answer: 'GLP-1 medications like Wegovy and Ozempic are Medsafe-approved treatments that help with weight loss by reducing appetite and improving blood sugar control. They work by mimicking natural hormones that signal fullness to your brain. However, we believe medication works best when combined with comprehensive lifestyle medicine support.'
+  },
+  {
+    question: 'Am I eligible for GLP-1 treatment?',
+    answer: 'Eligibility depends on your BMI, medical history, and current health status. Our doctors will assess if GLP-1 medications are appropriate for you during your consultation.'
+  },
+  {
+    question: 'How much weight can I expect to lose?',
+    answer: 'Results vary, but clinical studies show average weight loss of 10-15% of body weight over 6-12 months when combined with lifestyle changes. Individual results depend on adherence to treatment and lifestyle recommendations.'
+  },
+  {
+    question: 'What lifestyle support do you provide?',
+    answer: 'We provide comprehensive lifestyle medicine that goes beyond basic advice. This includes personalised nutrition plans, exercise guidance, stress management, sleep optimization, behavioural change strategies, and ongoing coaching support. We believe this holistic approach is essential for maximising your weight loss results and maintaining long-term success.'
+  },
+  {
+    question: 'Is telehealth safe for weight loss treatment?',
+    answer: 'Yes, our telehealth platform is secure and HIPAA compliant. We maintain the same high standards as in-person care, with qualified NZ doctors providing comprehensive medical supervision throughout your treatment.'
+  },
+  {
+    question: 'Why do you combine medication with lifestyle medicine?',
+    answer: 'Research shows that GLP-1 medications work best when combined with lifestyle changes. Medication helps with appetite control and metabolism, while lifestyle medicine addresses the root causes of weight gain and builds sustainable habits. This dual approach leads to better results, faster weight loss, and long-term success.'
+  },
+  {
+    question: 'How much does treatment cost?',
+    answer: 'Initial consultations are $149 for a comprehensive 30-minute session, with follow-up appointments at $75. GLP-1 medication costs vary and are not included in consultation fees. We\'ll provide transparent pricing during your consultation.'
+  }
+];
+
+const trustSignals = [
+  { text: 'MCNZ Registered Doctors', icon: 'shield-check' },
+  { text: 'Medsafe-Approved Medications', icon: 'check-circle' },
+  { text: 'Evidence-Based Care', icon: 'academic-cap' },
+  { text: 'Lifestyle Medicine Focus', icon: 'heart' }
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Vital Health NZ - GLP-1 Weight Loss Treatment & Lifestyle Medicine" description="Specialized telehealth weight loss treatment with GLP-1 medications and comprehensive lifestyle medicine support. Doctor-led care for sustainable weight loss results.">
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden min-h-screen flex items-center bg-gradient-primary">
+    <div class="container-max section-padding relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Text Content - Left Side -->
+        <div class="space-y-6 text-left">
+          <h1 class="text-4xl lg:text-5xl font-bold text-neutral-900 leading-tight">
+            Complete 
+            <span class="text-gradient">Weight Loss Treatment</span>
+            with GLP-1 & Lifestyle Medicine
+          </h1>
+          <p class="text-lg lg:text-xl text-neutral-700 leading-relaxed max-w-2xl">
+            Doctor-led telehealth combining Medsafe-approved GLP-1 medications with comprehensive lifestyle medicine support for sustainable weight loss success.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact" class="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-200">
+              Book Your Consultation
+            </a>
+            <a href="/how-it-works" class="btn-secondary text-lg px-8 py-4 hover:shadow-lg transition-all duration-200">
+              How It Works
+            </a>
+          </div>
+        </div>
+        
+        <!-- Hero Image - Right Side -->
+        <div class="relative lg:ml-8">
+          <picture>
+            <source srcset="/blog/images/social/hero-image.webp" type="image/webp">
+            <img 
+              src="/blog/images/social/hero-image.webp" 
+              alt="Vital Health NZ - Professional Weight Loss Treatment with GLP-1 Medications"
+              title="Doctor-led telehealth weight loss treatment in New Zealand"
+              class="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
+              loading="eager"
+              decoding="async"
+              onerror="this.style.display='none'"
+            >
+          </picture>
+          
+          <!-- Trust Signals -->
+          <div class="grid grid-cols-2 gap-4 pt-4">
+            {trustSignals.map((signal) => (
+              <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-sm font-medium text-neutral-700">{signal.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          Our Holistic Weight Loss Treatment Approach
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          We believe medication alone isn't enough. Our comprehensive approach combines GLP-1 medications with evidence-based lifestyle medicine, personalised nutrition, exercise guidance, and behavioural support for sustainable, long-term weight loss success.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {services.map((service) => (
+          <a href={service.href} class="group">
+            <div class="card h-full group-hover:scale-105 transition-transform duration-200">
+              <!-- Service Image -->
+              <div class="relative mb-6 overflow-hidden rounded-lg">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  class="w-full h-32 object-cover group-hover:scale-110 transition-transform duration-300"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <!-- Fallback Icon (shows if image fails to load) -->
+                <div class={`w-full h-32 bg-gradient-to-r ${service.color} flex items-center justify-center`} style="display: none;">
+                  <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    {service.icon === 'scale' && (
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>
+                    )}
+                    {service.icon === 'heart' && (
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                    )}
+                    {service.icon === 'shield-check' && (
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    )}
+                    {service.icon === 'chart-bar' && (
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2zm0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                    )}
+                  </svg>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-neutral-900 mb-3 group-hover:text-primary-600 transition-colors duration-200">
+                {service.title}
+              </h3>
+              <p class="text-neutral-600 leading-relaxed">
+                {service.description}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="/services" class="btn-secondary text-lg px-8 py-4">
+          Learn More About Our Approach
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section-padding bg-gradient-primary">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          How Our Holistic Weight Loss Treatment Works
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          Our comprehensive approach combines medication with lifestyle medicine for sustainable results in four integrated steps
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-bold text-white">1</span>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Initial Assessment</h3>
+          <p class="text-neutral-600">
+            Complete health questionnaire and book consultation. We'll assess your eligibility for GLP-1 treatment and understand your lifestyle goals.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-bold text-white">2</span>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Medical Consultation</h3>
+          <p class="text-neutral-600">
+            Meet your doctor via secure video call. Review health history, discuss goals, and create a personalised treatment plan combining medication with lifestyle medicine.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-bold text-white">3</span>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Treatment & Support</h3>
+          <p class="text-neutral-600">
+            Receive GLP-1 prescription if eligible, plus comprehensive lifestyle medicine plan including nutrition, exercise, and behavioural strategies with ongoing coaching support.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-bold text-white">4</span>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Ongoing Care</h3>
+          <p class="text-neutral-600">
+            Regular follow-ups to monitor progress, adjust treatment, refine lifestyle strategies, and ensure safe, effective weight loss results for long-term success.
+          </p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="/how-it-works" class="btn-primary text-lg px-8 py-4">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          Get answers to common questions about our holistic approach combining GLP-1 weight loss treatment with comprehensive lifestyle medicine support
+        </p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto space-y-6">
+        {faqs.map((faq, index) => (
+          <div class="card" itemscope itemtype="https://schema.org/Question">
+            <button 
+              class="faq-toggle w-full text-left flex items-center justify-between"
+              data-faq={index}
+            >
+              <h3 class="text-lg font-semibold text-neutral-900 pr-4" itemprop="name">
+                {faq.question}
+              </h3>
+              <svg class="w-5 h-5 text-primary-600 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div class="faq-content hidden mt-4 pt-4 border-t border-neutral-200" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+              <p class="text-neutral-600 leading-relaxed" itemprop="text">
+                {faq.answer}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="/faq" class="btn-secondary text-lg px-8 py-4">
+          View All FAQs
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="section-padding bg-primary-600">
+    <div class="container-max text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">
+        Stay Updated on Weight Loss & Lifestyle Medicine
+      </h2>
+      <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+        Get the latest GLP-1 research, lifestyle medicine insights, nutrition tips, and exclusive offers delivered to your inbox.
+      </p>
+      
+      <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+        <input 
+          type="email" 
+          placeholder="Enter your email" 
+          class="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white focus:ring-opacity-50"
+          required
+        />
+        <button type="submit" class="btn-accent whitespace-nowrap">
+          Subscribe
+        </button>
+      </form>
+      
+      <p class="text-primary-200 text-sm mt-4">
+        We respect your privacy. Unsubscribe at any time.
+      </p>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does telehealth work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide secure video consultations with qualified NZ doctors. You'll receive a secure link before your appointment, and we can prescribe medications, order tests, and provide ongoing care - all from the comfort of your home."
+      }
+    },
+    {
+      "@type": "Question", 
+      "name": "Are your doctors qualified?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, all our doctors are MCNZ registered and have extensive experience in their respective fields. We maintain the same high standards as traditional in-person consultations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I need a prescription?", 
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our doctors can prescribe medications when clinically appropriate. Prescriptions are sent electronically to your preferred pharmacy, and we can also arrange for delivery if needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost?",
+      "acceptedAnswer": {
+        "@type": "Answer", 
+        "text": "We offer transparent, upfront pricing. Initial consultations are $149 for a comprehensive 30-minute session, with follow-up appointments at $75. We also offer package deals for ongoing care programs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my information secure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We use enterprise-grade security and are fully HIPAA compliant. Your medical information is encrypted and stored securely, with strict access controls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you work with my regular GP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we can share your consultation notes and treatment plans with your regular GP if you wish. We believe in collaborative care and keeping your primary healthcare team informed."
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+  // FAQ Toggle Functionality
+  document.querySelectorAll('.faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('svg');
+      
+      if (content && icon) {
+        const isHidden = content.classList.contains('hidden');
+        
+        // Close all other FAQs
+        document.querySelectorAll('.faq-content').forEach(item => {
+          if (item !== content) {
+            item.classList.add('hidden');
+            const otherIcon = item.previousElementSibling?.querySelector('svg');
+            if (otherIcon) {
+              otherIcon.style.transform = 'rotate(0deg)';
+            }
+          }
+        });
+        
+        // Toggle current FAQ
+        content.classList.toggle('hidden', !isHidden);
+        icon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+      }
+    });
+  });
+</script>

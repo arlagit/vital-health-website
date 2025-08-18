@@ -1,0 +1,107 @@
+---
+export interface Props {
+  post: {
+    id: string;
+    title: string;
+    excerpt: string;
+    tags?: string[];
+    date: string;
+    author?: string;
+  };
+}
+
+const { post } = Astro.props;
+
+// Generate SEO-optimized image URLs
+const baseUrl = 'https://vitalhealth.nz';
+const socialImageUrl = `${baseUrl}/blog/images/social/${post.id}.webp`;
+const desktopImageUrl = `${baseUrl}/blog/images/desktop/${post.id}.webp`;
+
+// Generate SEO meta data
+const imageAlt = post.tags && post.tags.length > 0 
+  ? `${post.title} - ${post.tags.slice(0, 3).join(', ')} guide for New Zealand patients by Vital Health`
+  : `${post.title} - New Zealand weight loss medication guide by Vital Health`;
+
+const keywords = post.tags 
+  ? [...post.tags, 'New Zealand', 'Vital Health', 'telehealth', 'weight loss medication'].join(', ')
+  : 'weight loss, GLP-1, New Zealand, Vital Health, telehealth, medication';
+---
+
+<!-- Enhanced Open Graph for Images -->
+<meta property="og:image" content={socialImageUrl} />
+<meta property="og:image:secure_url" content={socialImageUrl} />
+<meta property="og:image:type" content="image/webp" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={imageAlt} />
+
+<!-- Twitter Card Enhanced -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content={socialImageUrl} />
+<meta name="twitter:image:alt" content={imageAlt} />
+
+<!-- Additional SEO Meta for Images -->
+<meta name="keywords" content={keywords} />
+<meta name="image" content={socialImageUrl} />
+<meta name="thumbnail" content={socialImageUrl} />
+
+<!-- Pinterest Rich Pins -->
+<meta property="og:rich_attachment" content="true" />
+
+<!-- LinkedIn Specific -->
+<meta property="og:image:user_generated" content="false" />
+
+<!-- Schema.org for the page -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.title,
+  "description": post.excerpt,
+  "image": {
+    "@type": "ImageObject",
+    "url": socialImageUrl,
+    "width": 1200,
+    "height": 630,
+    "caption": imageAlt,
+    "description": imageAlt,
+    "keywords": keywords,
+    "encodingFormat": "image/webp",
+    "author": {
+      "@type": "Organization",
+      "name": "Vital Health NZ"
+    },
+    "copyrightHolder": {
+      "@type": "Organization", 
+      "name": "Vital Health NZ"
+    }
+  },
+  "author": {
+    "@type": "Organization",
+    "name": post.author || "Vital Health NZ",
+    "url": "https://vitalhealth.nz"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vital Health NZ",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://vitalhealth.nz/images/logos/Vital-Health-Logo.png"
+    }
+  },
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `${baseUrl}/blog/${post.id}`
+  },
+  "keywords": keywords,
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Weight Management",
+    "description": "Professional weight loss treatment and medication guidance"
+  },
+  "specialty": {
+    "@type": "MedicalSpecialty",
+    "name": "Weight Management Medicine"
+  }
+})} />

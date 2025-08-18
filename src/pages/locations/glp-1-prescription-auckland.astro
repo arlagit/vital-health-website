@@ -1,0 +1,353 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const aucklandSuburbs = [
+  'Central Auckland', 'North Shore', 'Manukau', 'Waitakere', 'Papakura',
+  'Henderson', 'Albany', 'Takapuna', 'Newmarket', 'Ponsonby', 'Parnell',
+  'Mount Eden', 'Remuera', 'Epsom', 'Grey Lynn', 'Kingsland'
+];
+
+const medications = [
+  {
+    name: 'Wegovy (Semaglutide)',
+    dosage: 'Weekly injection',
+    cost: '$467-512/month',
+    description: 'FDA-approved for weight management with proven 12-15% weight loss results'
+  },
+  {
+    name: 'Saxenda (Liraglutide)', 
+    dosage: 'Daily injection',
+    cost: '$510-615/month',
+    description: 'Daily GLP-1 medication with 5-8% average weight loss'
+  },
+  {
+    name: 'Ozempic (Semaglutide)',
+    dosage: 'Weekly injection', 
+    cost: '$130-200/month',
+    description: 'For diabetes patients, often prescribed off-label for weight loss'
+  }
+];
+
+const testimonials = [
+  {
+    name: 'Sarah M.',
+    location: 'North Shore, Auckland',
+    quote: 'Lost 18kg in 6 months with Wegovy. The online consultations made it so convenient.',
+    result: '18kg lost'
+  },
+  {
+    name: 'David L.',
+    location: 'Central Auckland', 
+    quote: 'Professional service, qualified doctors, and results that actually work.',
+    result: '22kg lost'
+  }
+];
+---
+
+<Layout 
+  title="GLP-1 Prescription Online Auckland - Same Day Consultation" 
+  description="Get GLP-1 prescriptions online in Auckland. Wegovy, Semaglutide & Saxenda from MCNZ registered doctors. Same day consultation available. Serving all Auckland suburbs."
+  image="/blog/glp-1-prescription.jpg"
+>
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-accent-50 to-accent-100 section-padding">
+    <div class="container-max">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl lg:text-6xl font-bold text-neutral-900 mb-6 leading-tight">
+            GLP-1 Prescription Online <span class="text-accent-600">Auckland</span>
+          </h1>
+          <p class="text-xl lg:text-2xl text-neutral-600 mb-8 leading-relaxed">
+            Get Wegovy, Semaglutide & Saxenda prescriptions from MCNZ registered doctors. 
+            Same day consultation available for Auckland residents.
+          </p>
+          
+          <!-- Trust badges -->
+          <div class="flex flex-wrap gap-4 mb-8">
+            <div class="flex items-center bg-white rounded-lg px-4 py-2 shadow-sm">
+              <svg class="w-5 h-5 text-accent-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-sm font-medium">MCNZ Registered</span>
+            </div>
+            <div class="flex items-center bg-white rounded-lg px-4 py-2 shadow-sm">
+              <svg class="w-5 h-5 text-accent-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-sm font-medium">Secure & Confidential</span>
+            </div>
+            <div class="flex items-center bg-white rounded-lg px-4 py-2 shadow-sm">
+              <svg class="w-5 h-5 text-accent-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-sm font-medium">Same Day Service</span>
+            </div>
+          </div>
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact" class="btn-accent text-lg px-8 py-4">
+              Book Consultation Today
+            </a>
+            <a href="#pricing" class="btn-secondary text-lg px-8 py-4">
+              View Pricing
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-8 shadow-xl">
+          <h3 class="text-2xl font-bold text-neutral-900 mb-6">Quick Auckland Stats</h3>
+          <div class="space-y-4">
+            <div class="flex justify-between items-center border-b border-neutral-100 pb-2">
+              <span class="text-neutral-600">Adults with obesity</span>
+              <span class="font-semibold text-neutral-900">34.8%</span>
+            </div>
+            <div class="flex justify-between items-center border-b border-neutral-100 pb-2">
+              <span class="text-neutral-600">Population served</span>
+              <span class="font-semibold text-neutral-900">1.7M</span>
+            </div>
+            <div class="flex justify-between items-center border-b border-neutral-100 pb-2">
+              <span class="text-neutral-600">Average consultation time</span>
+              <span class="font-semibold text-neutral-900">45 minutes</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-neutral-600">Next available</span>
+              <span class="font-semibold text-accent-600">Today</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          Serving All Auckland Areas
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          Online GLP-1 prescriptions available for residents across greater Auckland
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {aucklandSuburbs.map((suburb) => (
+          <div class="bg-neutral-50 rounded-lg p-4 text-center hover:bg-accent-50 transition-colors duration-200">
+            <span class="text-sm font-medium text-neutral-700">{suburb}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Medications & Pricing -->
+  <section id="pricing" class="section-padding bg-gradient-primary">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          GLP-1 Medications Available in Auckland
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          Transparent pricing for all GLP-1 weight loss medications
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {medications.map((med) => (
+          <div class="card">
+            <div class="text-center mb-6">
+              <h3 class="text-2xl font-bold text-neutral-900 mb-2">{med.name}</h3>
+              <div class="text-3xl font-bold text-accent-600 mb-2">{med.cost}</div>
+              <div class="text-sm text-neutral-500">{med.dosage}</div>
+            </div>
+            <p class="text-neutral-600 mb-6 leading-relaxed">{med.description}</p>
+            <div class="space-y-3">
+              <div class="flex items-center space-x-3">
+                <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-sm text-neutral-700">Online prescription</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-sm text-neutral-700">Auckland pharmacy delivery</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-sm text-neutral-700">Monthly follow-ups</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <div class="text-center mt-12">
+        <p class="text-neutral-600 mb-6">
+          <strong>Consultation Fee:</strong> $149 initial consultation, $75 follow-ups
+        </p>
+        <a href="/contact" class="btn-accent text-lg px-8 py-4">
+          Get Started Today
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Patient Results -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          Real Results from Auckland Patients
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          See how our GLP-1 weight loss program is helping Auckland residents achieve their goals
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {testimonials.map((testimonial) => (
+          <div class="card">
+            <div class="flex items-start space-x-4">
+              <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl font-bold text-accent-600">{testimonial.result.split('k')[0]}kg</span>
+              </div>
+              <div>
+                <blockquote class="text-lg text-neutral-700 italic mb-4">
+                  "{testimonial.quote}"
+                </blockquote>
+                <div class="flex justify-between items-center">
+                  <div>
+                    <div class="font-semibold text-neutral-900">{testimonial.name}</div>
+                    <div class="text-sm text-neutral-500">{testimonial.location}</div>
+                  </div>
+                  <div class="text-right">
+                    <div class="font-semibold text-accent-600">{testimonial.result}</div>
+                    <div class="text-xs text-neutral-500">Weight loss</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section-padding bg-accent-600">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">
+          How to Get Your GLP-1 Prescription in Auckland
+        </h2>
+        <p class="text-xl text-accent-100 max-w-3xl mx-auto">
+          Simple 4-step process to start your weight loss journey
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-bold text-accent-600">1</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Book Consultation</h3>
+          <p class="text-accent-100">
+            Schedule your telehealth appointment with our MCNZ registered doctors
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-bold text-accent-600">2</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Medical Assessment</h3>
+          <p class="text-accent-100">
+            Complete health review and eligibility assessment for GLP-1 treatment
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-bold text-accent-600">3</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Get Prescription</h3>
+          <p class="text-accent-100">
+            Receive your prescription and choose your preferred Auckland pharmacy
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-bold text-accent-600">4</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Start Treatment</h3>
+          <p class="text-accent-100">
+            Begin your weight loss journey with ongoing support and monitoring
+          </p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="/contact" class="btn-primary text-lg px-8 py-4">
+          Book Your Auckland Consultation
+        </a>
+        <p class="text-accent-100 mt-4">
+          Most patients can start treatment within 24-48 hours
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Vital Health NZ - Auckland GLP-1 Prescription Services",
+  "description": "GLP-1 prescription services in Auckland including Wegovy, Semaglutide, and Saxenda for medical weight loss. MCNZ registered doctors providing telehealth consultations.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Auckland",
+    "addressRegion": "Auckland",
+    "addressCountry": "NZ"
+  },
+  "geo": {
+    "@type": "GeoCoordinates", 
+    "latitude": -36.8485,
+    "longitude": 174.7633
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Auckland",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "New Zealand"
+    }
+  },
+  "medicalSpecialty": ["Weight Management", "Endocrinology", "Telemedicine"],
+  "availableService": [
+    {
+      "@type": "MedicalTherapy",
+      "name": "GLP-1 Prescription Online Auckland",
+      "description": "Online prescription services for GLP-1 medications including Wegovy and Semaglutide",
+      "offers": {
+        "@type": "Offer",
+        "price": "120",
+        "priceCurrency": "NZD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ]
+}
+</script>

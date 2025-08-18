@@ -1,0 +1,197 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const faqs = [
+  {
+    category: 'General Questions',
+    questions: [
+      {
+        question: 'What is telehealth?',
+        answer: 'Telehealth is the delivery of healthcare services through digital communication technologies. We provide secure video consultations with qualified doctors, allowing you to receive medical care from the comfort of your home.'
+      },
+      {
+        question: 'Are your doctors qualified?',
+        answer: 'Yes, all our doctors are MCNZ registered and have extensive experience in their respective fields. We maintain the same high standards as traditional in-person consultations.'
+      },
+      {
+        question: 'Is telehealth as effective as in-person visits?',
+        answer: 'For many health concerns, telehealth is just as effective as in-person visits. Our doctors can assess symptoms, provide diagnoses, prescribe medications, and develop treatment plans. However, some conditions may require in-person examination.'
+      }
+    ]
+  },
+  {
+    category: 'Appointments & Booking',
+    questions: [
+      {
+        question: 'How do I book an appointment?',
+        answer: 'You can book an appointment through our online booking system on the Contact page. Simply fill out the form with your preferred service, date, and time, and we\'ll confirm your appointment within 24 hours.'
+      },
+      {
+        question: 'What if I need to cancel or reschedule?',
+        answer: 'We understand that life happens. You can cancel or reschedule your appointment up to 24 hours before your scheduled time through your patient portal or by using our online booking system.'
+      },
+      {
+        question: 'How long are consultations?',
+        answer: 'Initial consultations are typically 45-60 minutes, while follow-up appointments are 30 minutes. This gives us enough time to thoroughly assess your health and develop a comprehensive treatment plan.'
+      }
+    ]
+  },
+  {
+    category: 'Services & Treatment',
+    questions: [
+      {
+        question: 'What services do you offer?',
+        answer: 'We offer four main services: Weight Management (including Wegovy/Ozempic when appropriate), Men\'s Health, Sleep Health, and Heart & Metabolic Risk assessment. All services are provided through telehealth consultations.'
+      },
+      {
+        question: 'Can you prescribe medications?',
+        answer: 'Yes, our doctors can prescribe medications when clinically appropriate. Prescriptions are sent electronically to your preferred pharmacy, and we can also arrange for delivery if needed.'
+      },
+      {
+        question: 'Do you work with my regular GP?',
+        answer: 'Absolutely! We can share your consultation notes and treatment plans with your regular GP if you wish. We believe in collaborative care and keeping your primary healthcare team informed.'
+      }
+    ]
+  },
+  {
+    category: 'Technical & Security',
+    questions: [
+      {
+        question: 'What technology do I need?',
+        answer: 'You\'ll need a device with a camera and microphone (smartphone, tablet, or computer), a stable internet connection, and a private, quiet space for your consultation.'
+      },
+      {
+        question: 'Is my information secure?',
+        answer: 'Yes, we use enterprise-grade security and are fully HIPAA compliant. Your medical information is encrypted and stored securely, with strict access controls to protect your privacy.'
+      },
+      {
+        question: 'What if I have technical difficulties?',
+        answer: 'If you experience technical issues, our support team is available to help. We can also reschedule your appointment if needed. Most technical issues can be resolved quickly with our guidance.'
+      }
+    ]
+  },
+  {
+    category: 'Costs & Insurance',
+    questions: [
+      {
+        question: 'How much do consultations cost?',
+        answer: 'Initial consultations are $149 for a comprehensive 30-minute session, with follow-up appointments at $75. We also offer package deals for ongoing care programs. All costs are transparent with no hidden fees.'
+      },
+      {
+        question: 'Do you accept insurance?',
+        answer: 'We currently operate as a private service. However, some health insurance plans may cover telehealth services. We recommend checking with your insurance provider about telehealth coverage.'
+      },
+      {
+        question: 'Are there additional costs?',
+        answer: 'Additional costs may include laboratory tests, medications, or specialized treatments. We\'ll always discuss costs upfront before any procedures or prescriptions.'
+      }
+    ]
+  }
+];
+---
+
+<Layout title="Frequently Asked Questions" description="Get answers to common questions about our telehealth services, appointments, and healthcare approach.">
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-primary section-padding">
+    <div class="container-max text-center">
+      <h1 class="text-4xl lg:text-6xl font-bold text-neutral-900 mb-6">
+        Frequently Asked Questions
+      </h1>
+      <p class="text-xl lg:text-2xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
+        Get answers to common questions about our telehealth services, appointments, and healthcare approach
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Categories -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="space-y-16">
+        {faqs.map((category) => (
+          <div>
+            <h2 class="text-3xl font-bold text-neutral-900 mb-8 text-center">
+              {category.category}
+            </h2>
+            
+            <div class="max-w-4xl mx-auto space-y-6">
+              {category.questions.map((faq, index) => (
+                <div class="card">
+                  <button 
+                    class="faq-toggle w-full text-left flex items-center justify-between"
+                    data-faq={`${category.category}-${index}`}
+                  >
+                    <h3 class="text-lg font-semibold text-neutral-900 pr-4">
+                      {faq.question}
+                    </h3>
+                    <svg class="w-5 h-5 text-primary-600 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                  </button>
+                  <div class="faq-content hidden mt-4 pt-4 border-t border-neutral-200">
+                    <p class="text-neutral-600 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Still Have Questions -->
+  <section class="section-padding bg-gradient-primary">
+    <div class="container-max text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-6">
+        Still Have Questions?
+      </h2>
+      <p class="text-xl text-neutral-600 mb-8 max-w-2xl mx-auto">
+        Can't find the answer you're looking for? Our team is here to help.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="btn-primary text-lg px-8 py-4">
+          Book Consultation
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  // FAQ Toggle Functionality
+  document.querySelectorAll('.faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('svg');
+      
+      if (content && icon) {
+        const isHidden = content.classList.contains('hidden');
+        
+        // Close all other FAQs
+        document.querySelectorAll('.faq-content').forEach(item => {
+          if (item !== content) {
+            item.classList.add('hidden');
+            const otherIcon = item.previousElementSibling?.querySelector('svg');
+            if (otherIcon) {
+              otherIcon.style.transform = 'rotate(0deg)';
+            }
+          }
+        });
+        
+        // Toggle current FAQ
+        content.classList.toggle('hidden', !isHidden);
+        icon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+      }
+    });
+  });
+</script>
+

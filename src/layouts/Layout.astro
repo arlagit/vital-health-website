@@ -1,0 +1,181 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const { title, description = "Doctor-led telehealth that actually fits real life. We help with weight, men's performance, sleep, and heart risk—starting with a proper check, clear targets, and regular reviews.", image = "/og-image.jpg" } = Astro.props;
+
+const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astro.url;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.site || Astro.url)} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.site || Astro.url)} />
+    
+    <title>{title} | Vital Health NZ</title>
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalOrganization",
+        "name": "Vital Health NZ",
+        "alternateName": "Vital Health New Zealand",
+        "url": "https://vitalhealth.nz",
+        "logo": "https://vitalhealth.nz/images/logos/Vital-Health-Logo.png",
+        "image": "https://vitalhealth.nz/images/logos/Vital-Health-Logo.png",
+        "description": "Doctor-led telehealth services in New Zealand specializing in weight management, men's health, sleep health, and metabolic risk assessment. MCNZ registered doctors providing GLP-1 prescriptions including Wegovy and Semaglutide.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Auckland",
+          "addressRegion": "Auckland",
+          "addressCountry": "NZ"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.8485,
+          "longitude": 174.7633
+        },
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "New Zealand"
+          },
+          {
+            "@type": "City",
+            "name": "Auckland"
+          },
+          {
+            "@type": "City", 
+            "name": "Wellington"
+          },
+          {
+            "@type": "City",
+            "name": "Christchurch"
+          },
+          {
+            "@type": "City",
+            "name": "Hamilton"
+          },
+          {
+            "@type": "City",
+            "name": "Tauranga"
+          }
+        ],
+        "telephone": "+64-9-123-4567",
+
+        "medicalSpecialty": [
+          "Weight Management",
+          "Endocrinology", 
+          "Men's Health",
+          "Sleep Medicine",
+          "Preventive Medicine",
+          "Telemedicine"
+        ],
+        "serviceType": [
+          "Telehealth Consultations",
+          "GLP-1 Prescription Services",
+          "Medical Weight Management",
+          "Hormone Therapy",
+          "Sleep Disorder Treatment",
+          "Metabolic Health Assessment"
+        ],
+        "priceRange": "$$",
+        "paymentAccepted": ["Credit Card", "Bank Transfer"],
+        "currenciesAccepted": "NZD",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Medical Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalTherapy",
+                "name": "GLP-1 Prescription Online",
+                "description": "Online prescription services for GLP-1 medications including Wegovy, Semaglutide, and Saxenda for medical weight loss"
+              },
+              "price": "120",
+              "priceCurrency": "NZD",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer", 
+              "itemOffered": {
+                "@type": "MedicalTherapy",
+                "name": "Weight Management Program",
+                "description": "Comprehensive medical weight management with lifestyle coaching and medication when appropriate"
+              },
+              "price": "120",
+              "priceCurrency": "NZD",
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        },
+        "sameAs": [
+          "https://www.facebook.com/vitalhealthnz",
+          "https://www.linkedin.com/company/vital-health-nz"
+        ]
+      }
+    </script>
+    
+    <!-- Geo-targeting -->
+    <meta name="geo.region" content="NZ" />
+    <meta name="geo.placename" content="New Zealand" />
+    <meta name="geo.position" content="-40.9006;174.8860" />
+    <meta name="ICBM" content="-40.9006, 174.8860" />
+    
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+              <!-- Security headers -->
+          <meta http-equiv="X-Content-Type-Options" content="nosniff">
+          <meta http-equiv="X-Frame-Options" content="DENY">
+          <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+          
+          <!-- Medical compliance -->
+          <meta name="robots" content="index, follow">
+          <meta name="author" content="Vital Health NZ">
+          <meta name="keywords" content="telehealth, weight management, men's health, sleep health, heart health, New Zealand, online doctor, lifestyle medicine">
+          
+          <!-- Additional SEO -->
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta name="theme-color" content="#1e40af">
+          <meta name="msapplication-TileColor" content="#1e40af">
+          
+          <!-- Preconnect to external domains for performance -->
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

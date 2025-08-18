@@ -9,6 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.13.0"
+    "@astrojs/sitemap": "^3.5.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.13.0",
+    "lucide-astro": "^0.539.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1"
   }
 }

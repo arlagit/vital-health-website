@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Privacy Policy";
+const pageDescription = "Our commitment to protecting your privacy and maintaining the confidentiality of your health information.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-primary section-padding">
+    <div class="container-max text-center">
+      <h1 class="text-4xl lg:text-6xl font-bold text-neutral-900 mb-6">
+        Privacy Policy
+      </h1>
+              <p class="text-xl lg:text-2xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
+          Your privacy and the security of your health information is our top priority
+        </p>
+    </div>
+  </section>
+
+  <!-- Privacy Policy Content -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="max-w-4xl mx-auto prose prose-lg">
+        <h2>Our Commitment to Privacy</h2>
+        <p>
+          At Vital Health NZ, we are committed to protecting your privacy and maintaining the confidentiality 
+          of your health information. This Privacy Policy explains how we collect, use, disclose, and protect 
+          your personal and health information.
+        </p>
+
+        <h3>Information We Collect</h3>
+        <p>We collect the following types of information:</p>
+        <ul>
+          <li>Personal identification information (name, email, phone number)</li>
+          <li>Health information and medical history</li>
+          <li>Consultation notes and treatment plans</li>
+          <li>Payment and billing information</li>
+          <li>Technical information related to telehealth consultations</li>
+        </ul>
+
+        <h3>How We Use Your Information</h3>
+        <p>We use your information to:</p>
+        <ul>
+          <li>Provide telehealth medical services</li>
+          <li>Communicate with you about your care</li>
+          <li>Process payments and billing</li>
+          <li>Improve our services</li>
+          <li>Comply with legal and regulatory requirements</li>
+        </ul>
+
+        <h3>Information Security</h3>
+        <p>
+          We implement industry-standard security measures to protect your information, including:
+        </p>
+        <ul>
+          <li>End-to-end encryption for all communications</li>
+          <li>Secure data storage with access controls</li>
+          <li>Regular security audits and updates</li>
+          <li>HIPAA compliance measures</li>
+        </ul>
+
+        <h3>Information Sharing</h3>
+        <p>
+          We do not sell, trade, or rent your personal information. We may share your information only:
+        </p>
+        <ul>
+          <li>With your explicit consent</li>
+          <li>With your regular GP if you request it</li>
+          <li>As required by law or regulation</li>
+          <li>To protect your safety or the safety of others</li>
+        </ul>
+
+        <h3>Your Rights</h3>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Access your health information</li>
+          <li>Request corrections to your information</li>
+          <li>Request deletion of your information (subject to legal requirements)</li>
+          <li>Withdraw consent for information sharing</li>
+          <li>File a complaint about privacy practices</li>
+        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <h3>Contact Us</h3>
+        <p>
+          If you have questions about this Privacy Policy or our privacy practices, please contact us at:
+        </p>
+        <p>
+          <strong>Email:</strong> privacy@vitalhealth.nz<br>
+          <strong>Address:</strong> Vital Health NZ Privacy Officer
+        </p>
+
+        <h3>Updates to This Policy</h3>
+        <p>
+          We may update this Privacy Policy from time to time. We will notify you of any material changes 
+          by posting the new policy on our website and updating the effective date.
+        </p>
+
+        <p class="text-sm text-neutral-500 mt-8">
+          <strong>Effective Date:</strong> January 1, 2024<br>
+          <strong>Last Updated:</strong> January 1, 2024
+        </p>
+      </div>
+    </section>
+
+  <Footer />
+</Layout>
+

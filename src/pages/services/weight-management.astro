@@ -1,0 +1,227 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const features = [
+  'Comprehensive health assessment and medical history review',
+  'Personalised nutrition and exercise planning with lifestyle medicine focus',
+  'Lifestyle coaching and behavioural therapy for sustainable habit formation',
+  'Medical weight loss medications when clinically appropriate',
+  'Regular progress monitoring with lifestyle plan adjustments',
+  'Ongoing support and accountability for long-term success'
+];
+
+const medications = [
+  {
+    name: 'Wegovy (Semaglutide)',
+    description: 'Weekly injection that helps reduce appetite and increase feelings of fullness',
+    benefits: ['Reduces hunger', 'Increases satiety', 'Improves blood sugar control', 'FDA-approved for weight loss']
+  },
+  {
+    name: 'Ozempic (Semaglutide)',
+    description: 'Weekly injection primarily for diabetes management with weight loss benefits',
+    benefits: ['Blood sugar control', 'Weight loss support', 'Cardiovascular benefits', 'Well-established safety profile']
+  }
+];
+---
+
+<Layout title="Medical Weight Management | GLP-1 Prescriptions Auckland NZ" description="Medical weight management program with GLP-1 medications including Wegovy and Semaglutide. MCNZ doctors, transparent pricing from $149. Start your weight loss journey today.">
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-accent-50 to-accent-100 section-padding">
+    <div class="container-max text-center">
+      <div class="inline-block bg-accent-100 text-accent-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+        💊 GLP-1 Medications Available
+      </div>
+      <h1 class="text-4xl lg:text-6xl font-bold text-neutral-900 mb-6">
+        Medical Weight Management with <span class="text-accent-600">GLP-1</span>
+      </h1>
+      <p class="text-xl lg:text-2xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
+        Evidence-based weight loss combining GLP-1 medications with comprehensive lifestyle medicine support. 
+        MCNZ registered doctors providing integrated care that addresses both medication and sustainable lifestyle changes for long-term success.
+      </p>
+      
+      <!-- Key stats -->
+      <div class="grid grid-cols-3 gap-4 mt-8">
+        <div class="text-center">
+          <div class="text-2xl font-bold text-accent-600">12-15%</div>
+          <div class="text-sm text-neutral-600">Average weight loss</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-accent-600">$149</div>
+          <div class="text-sm text-neutral-600">Initial consultation</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-accent-600">24hrs</div>
+          <div class="text-sm text-neutral-600">To start treatment</div>
+        </div>
+      </div>
+      <div class="mt-8">
+        <a href="/contact" class="btn-accent text-lg px-8 py-4">
+          Book Your Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          What's Included in Your Program
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          A comprehensive approach to weight management that combines medication with lifestyle medicine to address all aspects of your health and build sustainable habits
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {features.map((feature) => (
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <span class="text-lg text-neutral-700">{feature}</span>
+          </div>
+        ))}
+        
+        <!-- Pricing callout -->
+        <div class="mt-8 p-6 bg-accent-50 rounded-xl">
+          <h3 class="text-xl font-bold text-neutral-900 mb-4">Transparent Pricing</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <div class="text-lg font-semibold text-accent-600">Initial Consultation</div>
+              <div class="text-2xl font-bold text-neutral-900">$149</div>
+              <div class="text-sm text-neutral-600">Comprehensive assessment & treatment plan</div>
+            </div>
+            <div>
+              <div class="text-lg font-semibold text-accent-600">Follow-up Visits</div>
+              <div class="text-2xl font-bold text-neutral-900">$75</div>
+              <div class="text-sm text-neutral-600">Monthly monitoring & medication adjustments</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Medications -->
+  <section class="section-padding bg-gradient-primary">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          Medical Weight Loss Medications
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          When lifestyle changes alone aren't enough, we can prescribe FDA-approved medications to support your weight loss journey
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {medications.map((med, index) => (
+          <div class={`card ${index === 0 ? 'ring-2 ring-accent-500' : ''}`}>
+            {index === 0 && (
+              <div class="bg-accent-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                Most Prescribed
+              </div>
+            )}
+            <div class="text-center mb-6">
+              <h3 class="text-2xl font-bold text-neutral-900 mb-2">{med.name}</h3>
+              <div class="text-3xl font-bold text-accent-600">{index === 0 ? '$467-512' : index === 1 ? '$130-200' : '$510-615'}</div>
+              <div class="text-sm text-neutral-500">per month (including needles)</div>
+            </div>
+            <p class="text-neutral-600 mb-6 leading-relaxed">{med.description}</p>
+            <h4 class="text-lg font-semibold text-neutral-900 mb-3">Key Benefits:</h4>
+            <ul class="space-y-2 mb-6">
+              {med.benefits.map((benefit) => (
+                <li class="flex items-center space-x-3">
+                  <div class="w-5 h-5 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg class="w-3 h-3 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                  <span class="text-neutral-700">{benefit}</span>
+                </li>
+              ))}
+            </ul>
+            <a href="/contact" class={`w-full text-center block py-3 px-6 rounded-lg font-semibold transition-colors duration-200 ${
+              index === 0 
+                ? 'bg-accent-600 hover:bg-accent-700 text-white' 
+                : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-700'
+            }`}>
+              Get {med.name.split(' ')[0]} Prescription
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          How Our Weight Management Program Works
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-accent-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-bold text-white">1</span>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Assessment</h3>
+          <p class="text-neutral-600">Comprehensive health evaluation and goal setting</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-accent-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-bold text-white">2</span>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Plan</h3>
+          <p class="text-neutral-600">Personalized nutrition, exercise, and medication plan</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-accent-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-bold text-white">3</span>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Support</h3>
+          <p class="text-neutral-600">Ongoing coaching and progress monitoring</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-accent-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-bold text-white">4</span>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Success</h3>
+          <p class="text-neutral-600">Achieve and maintain your weight loss goals</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-accent-600">
+    <div class="container-max text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+        Ready to Start Your Weight Loss Journey?
+      </h2>
+      <p class="text-xl text-accent-100 mb-8 max-w-2xl mx-auto">
+        Book your consultation with our weight management specialist and take the first step towards a healthier you.
+      </p>
+      <a href="/contact" class="btn-primary text-lg px-8 py-4">
+        Book Consultation
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+

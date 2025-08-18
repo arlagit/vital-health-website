@@ -1,0 +1,289 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const services = [
+  {
+    title: 'GLP-1 Weight Loss Treatment',
+    description: 'Evidence-based GLP-1 medications combined with personalised lifestyle medicine support for optimal results.',
+    longDescription: 'Our specialized GLP-1 weight loss treatment program combines Medsafe-approved medications like Wegovy or Ozempic with comprehensive lifestyle medicine support. We believe medication works best when combined with personalised nutrition, exercise, and behavioural strategies for sustainable, long-term results.',
+    icon: 'scale',
+    href: '/services/weight-management',
+    color: 'from-accent-500 to-accent-600',
+    features: [
+      'Comprehensive health assessment',
+      'GLP-1 medication prescription',
+      'Medical supervision and monitoring',
+      'Dose titration and adjustments',
+      'Regular progress monitoring',
+      'Ongoing medical support'
+    ],
+    price: '$149 initial consultation'
+  },
+  {
+    title: 'Lifestyle Medicine Plans',
+    description: 'Comprehensive nutrition, exercise, stress management, and behavioural change strategies that work alongside medication.',
+    longDescription: 'Comprehensive lifestyle medicine support that goes beyond basic advice. We provide personalised nutrition plans, exercise guidance, stress management, sleep optimisation, behavioural change strategies, and ongoing coaching. This holistic approach is essential for maximising your weight loss results and maintaining long-term success.',
+    icon: 'heart',
+    href: '/services/lifestyle-medicine',
+    color: 'from-primary-500 to-primary-600',
+    features: [
+      'Personalised nutrition planning',
+      'Exercise and movement guidance',
+      'Behaviour change strategies',
+      'Stress management techniques',
+      'Sleep optimisation support',
+      'Ongoing lifestyle coaching'
+    ],
+    price: '$149 initial consultation'
+  },
+  {
+    title: 'Medical Supervision',
+    description: 'Ongoing medical monitoring and lifestyle coaching from qualified NZ doctors throughout your treatment journey.',
+    longDescription: 'Comprehensive medical supervision and lifestyle coaching throughout your weight loss journey, including regular health assessments, medication management, side effect monitoring, lifestyle plan adjustments, and coordination with your primary care team. We ensure your safety and optimise treatment effectiveness through integrated care.',
+    icon: 'shield-check',
+    href: '/services/medical-supervision',
+    color: 'from-secondary-500 to-secondary-600',
+    features: [
+      'Regular health monitoring',
+      'Medication management',
+      'Side effect assessment',
+      'Blood work coordination',
+      'Primary care coordination',
+      'Emergency support access'
+    ],
+    price: '$75 follow-up consultation'
+  },
+  {
+    title: 'Progress Tracking',
+    description: 'Regular assessments, measurements, and lifestyle adjustments to ensure optimal results and long-term success.',
+    longDescription: 'Comprehensive progress tracking including regular weight measurements, body composition analysis, health metrics monitoring, lifestyle plan adjustments, and treatment plan modifications. We use data-driven approaches to optimise your results and ensure continued progress through integrated care.',
+    icon: 'chart-bar',
+    href: '/services/progress-tracking',
+    color: 'from-purple-500 to-purple-600',
+    features: [
+      'Regular weight monitoring',
+      'Body composition tracking',
+      'Health metrics assessment',
+      'Treatment plan adjustments',
+      'Progress reporting',
+      'Goal setting and review'
+    ],
+    price: '$75 follow-up consultation'
+  }
+];
+
+const process = [
+  {
+    step: '1',
+    title: 'Initial Assessment',
+    description: 'Comprehensive health evaluation, medical history review, and eligibility assessment for GLP-1 treatment.'
+  },
+  {
+    step: '2',
+    title: 'Treatment Planning',
+    description: 'Personalised treatment plan development combining medication selection with comprehensive lifestyle medicine strategies, nutrition planning, and behavioural goal setting.'
+  },
+  {
+    step: '3',
+    title: 'Treatment Initiation',
+    description: 'Medication prescription, comprehensive lifestyle plan implementation, and initial support and education for sustainable habit formation.'
+  },
+  {
+    step: '4',
+    title: 'Ongoing Care',
+    description: 'Regular follow-up appointments to monitor progress, adjust treatment, refine lifestyle strategies, and provide ongoing support for long-term success.'
+  }
+];
+---
+
+<Layout title="Weight Loss Treatment Services - Vital Health NZ" description="Specialized weight loss treatment services including GLP-1 medications, lifestyle medicine plans, medical supervision, and comprehensive progress tracking. Doctor-led telehealth care for sustainable weight loss results.">
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-primary">
+    <div class="container-max section-padding">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl lg:text-6xl font-bold text-neutral-900 mb-6">
+          Specialized Weight Loss Treatment Services
+        </h1>
+        <p class="text-xl lg:text-2xl text-neutral-700 leading-relaxed mb-8">
+          Comprehensive weight loss treatment combining FDA-approved GLP-1 medications with evidence-based lifestyle medicine. Doctor-led telehealth care for sustainable, long-term results.
+        </p>
+        <a href="/contact" class="btn-primary text-lg px-8 py-4">
+          Book Your Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          Our Weight Loss Treatment Services
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          Comprehensive weight loss treatment combining medical expertise with lifestyle medicine for sustainable results
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {services.map((service) => (
+          <div class="card group">
+            <div class="flex items-start space-x-6">
+              <div class={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  {service.icon === 'scale' && (
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>
+                  )}
+                  {service.icon === 'heart' && (
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                  )}
+                  {service.icon === 'shield-check' && (
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                  )}
+                  {service.icon === 'chart-bar' && (
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2zm0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                  )}
+                </svg>
+              </div>
+              
+              <div class="flex-1">
+                <h3 class="text-2xl font-bold text-neutral-900 mb-3 group-hover:text-primary-600 transition-colors duration-200">
+                  {service.title}
+                </h3>
+                <p class="text-lg text-neutral-600 mb-4 leading-relaxed">
+                  {service.longDescription}
+                </p>
+                
+                <ul class="space-y-2 mb-6">
+                  {service.features.map((feature) => (
+                    <li class="flex items-center space-x-2">
+                      <svg class="w-4 h-4 text-accent-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                      </svg>
+                      <span class="text-neutral-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <div class="flex items-center justify-between">
+                  <span class="text-lg font-semibold text-primary-600">{service.price}</span>
+                  <a href={service.href} class="btn-secondary">
+                    Learn More
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatment Process -->
+  <section class="section-padding bg-gradient-primary">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          Our Weight Loss Treatment Process
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          Simple, structured approach to sustainable weight loss with ongoing medical supervision
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {process.map((step) => (
+          <div class="text-center">
+            <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="text-3xl font-bold text-white">{step.step}</span>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-3">{step.title}</h3>
+            <p class="text-neutral-600 leading-relaxed">
+              {step.description}
+            </p>
+          </div>
+        ))}
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="/how-it-works" class="btn-primary text-lg px-8 py-4">
+          Learn More About Our Process
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          Why Choose Vital Health for Weight Loss Treatment?
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          Specialized expertise in GLP-1 weight loss treatment with comprehensive lifestyle medicine support
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Medical Expertise</h3>
+          <p class="text-neutral-600">
+            Qualified NZ doctors with specialized training in weight loss medicine and GLP-1 treatments.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Evidence-Based Care</h3>
+          <p class="text-neutral-600">
+            Treatment plans based on the latest research and clinical guidelines for safe, effective weight loss.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Comprehensive Support</h3>
+          <p class="text-neutral-600">
+            Ongoing medical supervision, lifestyle coaching, and support throughout your weight loss journey.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-primary-600">
+    <div class="container-max text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">
+        Ready to Start Your Weight Loss Journey?
+      </h2>
+      <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+        Book your consultation today and take the first step towards sustainable weight loss with expert medical supervision.
+      </p>
+      <a href="/contact" class="btn-accent text-lg px-8 py-4">
+        Book Your Consultation
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

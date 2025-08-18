@@ -1,0 +1,326 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const steps = [
+  {
+    number: '1',
+    icon: 'calendar',
+    title: 'Initial Assessment & Consultation',
+    description: 'Book your consultation and complete a comprehensive health questionnaire to assess your eligibility for GLP-1 weight loss treatment and understand your lifestyle goals.',
+    details: [
+      'Select your preferred appointment time',
+      'Complete detailed health questionnaire',
+      'Provide medical history and current medications',
+      'Receive preparation instructions for your consultation'
+    ]
+  },
+  {
+    number: '2',
+    icon: 'clipboard',
+    title: 'Medical Consultation & Evaluation',
+    description: 'Meet with your MCNZ-registered doctor via secure video call for a comprehensive assessment of your weight loss goals, medical eligibility, and lifestyle factors.',
+    details: [
+      'Secure, HIPAA-compliant video platform',
+      '45-60 minute comprehensive consultation',
+      'Medical history review and physical assessment',
+      'Discussion of weight loss goals and expectations'
+    ]
+  },
+  {
+    number: '3',
+    icon: 'document-text',
+    title: 'Personalized Treatment Plan',
+    description: 'Receive your customized weight loss treatment plan, including GLP-1 medication prescription if eligible and comprehensive lifestyle medicine strategies for sustainable success.',
+    details: [
+      'GLP-1 medication prescription (if eligible)',
+      'Personalized nutrition and exercise plan',
+      'Behavior change strategies and goal setting',
+      'Follow-up appointment scheduling'
+    ]
+  },
+  {
+    number: '4',
+    icon: 'heart',
+    title: 'Treatment Initiation & Support',
+    description: 'Begin your weight loss journey with ongoing medical supervision, medication management, and comprehensive lifestyle coaching support for sustainable habit formation.',
+    details: [
+      'Medication initiation and titration guidance',
+      'Lifestyle plan implementation support',
+      'Regular progress monitoring and adjustments',
+      'Ongoing medical supervision and safety monitoring'
+    ]
+  },
+  {
+    number: '5',
+    icon: 'chart-bar',
+    title: 'Ongoing Care & Progress Tracking',
+    description: 'Continuous support through regular follow-ups, progress monitoring, and lifestyle plan adjustments to ensure optimal results and long-term success.',
+    details: [
+      'Regular follow-up consultations',
+      'Weight and health metrics monitoring',
+      'Treatment plan adjustments as needed',
+      'Long-term maintenance support'
+    ]
+  }
+];
+
+const benefits = [
+  {
+    title: 'Medical Expertise',
+    description: 'Specialized care from qualified NZ doctors with expertise in weight loss medicine and GLP-1 treatments.',
+    icon: 'academic-cap'
+  },
+  {
+    title: 'Comprehensive Support',
+    description: 'Combined medical treatment with evidence-based lifestyle medicine for sustainable, long-term weight loss results.',
+    icon: 'heart'
+  },
+  {
+    title: 'Convenience',
+    description: 'No travel time, no waiting rooms. Get specialized weight loss care from anywhere in New Zealand.',
+    icon: 'clock'
+  },
+  {
+    title: 'Ongoing Monitoring',
+    description: 'Regular medical supervision and progress tracking to ensure safe, effective treatment outcomes.',
+    icon: 'chart-bar'
+  }
+];
+---
+
+<Layout title="How Our Weight Loss Treatment Works - Vital Health NZ" description="Learn about our comprehensive weight loss treatment process from initial assessment to ongoing care. Doctor-led telehealth treatment with GLP-1 medications and lifestyle support.">
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-primary section-padding">
+    <div class="container-max text-center">
+      <h1 class="text-4xl lg:text-6xl font-bold text-neutral-900 mb-6">
+        How Our Weight Loss Treatment Works
+      </h1>
+      <p class="text-xl lg:text-2xl text-neutral-700 leading-relaxed max-w-3xl mx-auto">
+        Simple, secure, and effective weight loss treatment combining GLP-1 medications with comprehensive lifestyle medicine support
+      </p>
+    </div>
+  </section>
+
+  <!-- Process Steps -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          Our Weight Loss Treatment Process
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          A structured, medical approach to sustainable weight loss with ongoing supervision and support
+        </p>
+      </div>
+      
+      <div class="space-y-12">
+        {steps.map((step, index) => (
+          <div class="bg-white rounded-2xl border border-neutral-200 p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
+            <div class="flex items-start space-x-6">
+              <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  {step.icon === 'calendar' && (
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                  )}
+                  {step.icon === 'clipboard' && (
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                  )}
+                  {step.icon === 'video-camera' && (
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                  )}
+                  {step.icon === 'document-text' && (
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  )}
+                  {step.icon === 'heart' && (
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                  )}
+                  {step.icon === 'chart-bar' && (
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2zm0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                  )}
+                </svg>
+              </div>
+              
+              <div class="flex-1">
+                <h3 class="text-2xl font-bold text-neutral-900 mb-4">{step.title}</h3>
+                <p class="text-lg text-neutral-600 mb-6 leading-relaxed">{step.description}</p>
+                
+                <ul class="space-y-3">
+                  {step.details.map((detail) => (
+                    <li class="flex items-start space-x-3">
+                      <div class="w-5 h-5 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <svg class="w-3 h-3 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                      </div>
+                      <span class="text-neutral-700">{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="/contact" class="btn-primary text-lg px-8 py-4">
+          Start Your Weight Loss Journey
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section-padding bg-gradient-primary">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          Why Choose Our Weight Loss Treatment?
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          Comprehensive, medical-grade weight loss treatment with ongoing support and supervision
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {benefits.map((benefit) => (
+          <div class="text-center">
+            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {benefit.icon === 'academic-cap' && (
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                )}
+                {benefit.icon === 'heart' && (
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                )}
+                {benefit.icon === 'clock' && (
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                )}
+                {benefit.icon === 'chart-bar' && (
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2zm0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                )}
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-3">{benefit.title}</h3>
+            <p class="text-neutral-700 leading-relaxed">
+              {benefit.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          What to Expect from Your Weight Loss Treatment
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+          Clear expectations and outcomes for your weight loss journey with our comprehensive approach
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-bold text-neutral-900 mb-6">Treatment Timeline & Results</h3>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-accent-600 font-semibold text-sm">1</span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-neutral-900 mb-2">Initial Consultation (Week 1)</h4>
+                <p class="text-neutral-600">Comprehensive assessment and treatment plan development</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-accent-600 font-semibold text-sm">2</span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-neutral-900 mb-2">Treatment Initiation (Weeks 2-4)</h4>
+                <p class="text-neutral-600">Medication start, lifestyle plan implementation, and initial support</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-accent-600 font-semibold text-sm">3</span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-neutral-900 mb-2">Progress Phase (Months 2-6)</h4>
+                <p class="text-neutral-600">Regular monitoring, dose adjustments, and ongoing lifestyle support</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-accent-600 font-semibold text-sm">4</span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-neutral-900 mb-2">Maintenance Phase (6+ Months)</h4>
+                <p class="text-neutral-600">Long-term support and strategies for maintaining your weight loss results</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-primary rounded-2xl p-8">
+          <h3 class="text-2xl font-bold text-neutral-900 mb-6">Expected Outcomes</h3>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-neutral-700">Average weight loss of 10-15% of body weight</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-neutral-700">Improved metabolic health markers</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-neutral-700">Sustainable lifestyle changes</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-neutral-700">Ongoing medical supervision and support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-primary-600">
+    <div class="container-max text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">
+        Ready to Start Your Weight Loss Journey?
+      </h2>
+      <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+        Book your consultation today and take the first step towards sustainable weight loss with expert medical supervision.
+      </p>
+      <a href="/contact" class="btn-accent text-lg px-8 py-4">
+        Book Your Consultation
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
