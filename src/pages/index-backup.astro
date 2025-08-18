@@ -1,0 +1,430 @@
+---
+// Backup of original homepage - restore this when ready to launch
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const services = [
+  {
+    title: 'GLP-1 Weight Loss Treatment',
+    description: 'Evidence-based GLP-1 medications combined with personalised lifestyle medicine support for optimal results.',
+    icon: 'scale',
+    link: '/services/weight-management'
+  },
+  {
+    title: 'Heart & Metabolic Health',
+    description: 'Comprehensive cardiovascular and metabolic health management with personalised treatment plans.',
+    icon: 'heart',
+    link: '/services/heart-metabolic'
+  },
+  {
+    title: 'Men\'s Health',
+    description: 'Specialised men\'s health services addressing hormonal health, vitality, and wellness.',
+    icon: 'user',
+    link: '/services/mens-health'
+  },
+  {
+    title: 'Sleep Health',
+    description: 'Evidence-based sleep medicine to improve your rest, recovery, and overall health.',
+    icon: 'moon',
+    link: '/services/sleep-health'
+  }
+];
+
+const trustSignals = [
+  { text: 'MCNZ Registered Doctors' },
+  { text: 'Evidence-Based Medicine' },
+  { text: 'Secure Telehealth Platform' },
+  { text: 'Lifestyle Medicine Focus' }
+];
+---
+
+<Layout title="Vital Health NZ - Professional Telehealth for Weight Loss & Lifestyle Medicine" description="Transform your health with qualified telehealth doctors. Evidence-based GLP-1 weight loss treatment, lifestyle medicine, and comprehensive health management. Book your consultation today.">
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden min-h-screen flex items-center">
+    <div class="absolute inset-0 bg-gradient-primary"></div>
+    <div class="container-max section-padding relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6 text-left">
+          <h1 class="text-4xl lg:text-5xl font-bold text-neutral-900 leading-tight">
+            Complete 
+            <span class="text-gradient">Weight Loss Treatment</span>
+            with GLP-1 & Lifestyle Medicine
+          </h1>
+          <p class="text-lg lg:text-xl text-neutral-700 leading-relaxed max-w-2xl">
+            Doctor-led telehealth combining Medsafe-approved GLP-1 medications with comprehensive lifestyle medicine support for sustainable weight loss success.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact" class="btn-primary text-lg px-8 py-4">
+              Book Consultation
+            </a>
+            <a href="/how-it-works" class="btn-secondary text-lg px-8 py-4">
+              How It Works
+            </a>
+          </div>
+          <!-- Trust Signals -->
+          <div class="grid grid-cols-2 gap-4 pt-4">
+            {trustSignals.map((signal) => (
+              <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-sm font-medium text-neutral-700">{signal.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <!-- Hero Image - Right Side -->
+        <div class="relative lg:ml-8">
+          <picture>
+            <source srcset="/blog/images/social/hero-image.webp" type="image/webp">
+            <img 
+              src="/blog/images/social/hero-image.webp" 
+              alt="Vital Health NZ - Professional Weight Loss Treatment with GLP-1 Medications"
+              title="Doctor-led telehealth weight loss treatment in New Zealand"
+              class="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
+              loading="eager"
+              decoding="async"
+              onerror="this.style.display='none'"
+            >
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-5xl font-bold text-neutral-900 mb-6">
+          Our Holistic Weight Loss Treatment Approach
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
+          We combine evidence-based GLP-1 medications with comprehensive lifestyle medicine, creating personalised treatment plans that address the root causes of weight gain for lasting, sustainable results.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {services.map((service) => (
+          <div class="card p-8 text-center group hover:shadow-xl transition-all duration-300">
+            <div class="w-16 h-16 mx-auto mb-6 bg-gradient-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              {service.icon === 'scale' && (
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 2L3 7v11a2 2 0 002 2h10a2 2 0 002-2V7l-7-5zM8 15V9h4v6H8z" clip-rule="evenodd"/>
+                </svg>
+              )}
+              {service.icon === 'heart' && (
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                </svg>
+              )}
+              {service.icon === 'user' && (
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                </svg>
+              )}
+              {service.icon === 'moon' && (
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                </svg>
+              )}
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-4">{service.title}</h3>
+            <p class="text-neutral-600 mb-6 leading-relaxed">{service.description}</p>
+            <a href={service.link} class="btn-secondary group-hover:btn-primary transition-all duration-300">
+              Learn More
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="section-padding bg-neutral-50">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-5xl font-bold text-neutral-900 mb-6">
+          How Our Weight Loss Treatment Works
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
+          Our comprehensive approach combines medical expertise with lifestyle medicine, ensuring you have the support and tools needed for sustainable weight loss success.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto mb-6 bg-gradient-primary rounded-full flex items-center justify-center text-white text-2xl font-bold">
+            1
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-4">Comprehensive Assessment</h3>
+          <p class="text-neutral-600 leading-relaxed">
+            Detailed health evaluation including medical history, lifestyle factors, and weight loss goals to create your personalised treatment plan.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto mb-6 bg-gradient-primary rounded-full flex items-center justify-center text-white text-2xl font-bold">
+            2
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-4">Personalised Treatment Plan</h3>
+          <p class="text-neutral-600 leading-relaxed">
+            Evidence-based GLP-1 medications combined with lifestyle medicine strategies tailored to your unique needs and circumstances.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto mb-6 bg-gradient-primary rounded-full flex items-center justify-center text-white text-2xl font-bold">
+            3
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-4">Ongoing Support & Monitoring</h3>
+          <p class="text-neutral-600 leading-relaxed">
+            Regular check-ins, progress monitoring, and plan adjustments with lifestyle medicine support to ensure sustainable results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="section-padding bg-primary-600 text-white">
+    <div class="container-max">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl lg:text-6xl font-bold mb-2">5000+</div>
+          <div class="text-primary-100">Patients Treated</div>
+        </div>
+        <div>
+          <div class="text-4xl lg:text-6xl font-bold mb-2">95%</div>
+          <div class="text-primary-100">Patient Satisfaction</div>
+        </div>
+        <div>
+          <div class="text-4xl lg:text-6xl font-bold mb-2">15%</div>
+          <div class="text-primary-100">Average Weight Loss</div>
+        </div>
+        <div>
+          <div class="text-4xl lg:text-6xl font-bold mb-2">24/7</div>
+          <div class="text-primary-100">Platform Access</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-5xl font-bold text-neutral-900 mb-6">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
+          Get answers to common questions about our weight loss treatment approach, GLP-1 medications, and lifestyle medicine services.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto space-y-4">
+        <div class="card">
+          <details class="group">
+            <summary class="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg text-neutral-900">
+              What are GLP-1 medications and how do they work for weight loss?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-neutral-600 leading-relaxed">
+              GLP-1 receptor agonists are medications that mimic hormones naturally produced in your body. They work by slowing gastric emptying, reducing appetite, and helping regulate blood sugar levels. This leads to significant weight loss when combined with lifestyle changes. Our doctors will assess your suitability and provide comprehensive support throughout your treatment.
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details class="group">
+            <summary class="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg text-neutral-900">
+              How much does treatment cost?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-neutral-600 leading-relaxed">
+              Our initial consultation is $149 for a comprehensive 30-minute assessment with a qualified doctor. Follow-up consultations are $75. Medication costs vary depending on the specific treatment prescribed, typically ranging from $400-600 monthly. We provide transparent pricing with no hidden fees.
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details class="group">
+            <summary class="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg text-neutral-900">
+              What does lifestyle medicine support include?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-neutral-600 leading-relaxed">
+              Our lifestyle medicine approach includes personalised nutrition guidance, exercise planning, sleep optimisation, stress management techniques, and behavioural coaching. We focus on sustainable habit formation and address the root causes of weight gain for long-term success.
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details class="group">
+            <summary class="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg text-neutral-900">
+              How long does treatment typically take?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-neutral-600 leading-relaxed">
+              Most patients see initial results within 4-8 weeks, with significant weight loss typically occurring over 6-12 months. Treatment duration varies based on individual goals and response. We provide ongoing support and monitoring throughout your journey, with regular check-ins to optimise your plan.
+            </div>
+          </details>
+        </div>
+
+        <div class="card">
+          <details class="group">
+            <summary class="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg text-neutral-900">
+              Are your doctors qualified and registered?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-neutral-600 leading-relaxed">
+              Yes, all our doctors are fully registered with the Medical Council of New Zealand (MCNZ) and have additional training in weight management and lifestyle medicine. We maintain the highest standards of medical care and operate under strict clinical guidelines.
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section-padding bg-neutral-50">
+    <div class="container-max text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-6">
+        Stay Updated on Weight Loss & Lifestyle Medicine
+      </h2>
+      <p class="text-xl text-neutral-600 mb-8 max-w-2xl mx-auto">
+        Get evidence-based insights, treatment updates, and practical tips for sustainable weight management delivered to your inbox.
+      </p>
+      <div class="max-w-md mx-auto flex gap-4">
+        <input 
+          type="email" 
+          placeholder="Enter your email" 
+          class="flex-1 px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+        >
+        <button class="btn-primary px-8 py-3">
+          Subscribe
+        </button>
+      </div>
+      <p class="text-sm text-neutral-500 mt-4">
+        No spam. Unsubscribe anytime. Evidence-based content only.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-primary-600">
+    <div class="container-max text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+        Ready to Start Your Weight Loss Journey?
+      </h2>
+      <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+        Book your consultation with our qualified doctors and take the first step towards sustainable weight loss with evidence-based treatment.
+      </p>
+      <a href="/contact" class="btn-white text-lg px-8 py-4 inline-block">
+        Book Consultation
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+// FAQ Toggle Animation
+document.addEventListener('DOMContentLoaded', function() {
+  const details = document.querySelectorAll('details');
+  
+  details.forEach(detail => {
+    detail.addEventListener('toggle', function() {
+      if (this.open) {
+        // Close other details when one opens
+        details.forEach(otherDetail => {
+          if (otherDetail !== this && otherDetail.open) {
+            otherDetail.open = false;
+          }
+        });
+      }
+    });
+  });
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// Newsletter form handling
+const newsletterForm = document.querySelector('.max-w-md');
+if (newsletterForm) {
+  newsletterForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = this.querySelector('input[type="email"]').value;
+    if (email) {
+      // Here you would typically send to your newsletter service
+      alert('Thank you for subscribing! We\'ll keep you updated with the latest in weight management and lifestyle medicine.');
+      this.querySelector('input[type="email"]').value = '';
+    }
+  });
+}
+</script>
+
+<style>
+/* Ensure smooth transitions for details elements */
+details {
+  transition: all 0.3s ease;
+}
+
+details[open] {
+  background-color: rgba(99, 102, 241, 0.05);
+}
+
+details summary {
+  transition: all 0.3s ease;
+}
+
+details[open] summary {
+  color: rgb(99, 102, 241);
+}
+
+/* Hero section animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content > * {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+.hero-content > *:nth-child(2) { animation-delay: 0.2s; }
+.hero-content > *:nth-child(3) { animation-delay: 0.3s; }
+.hero-content > *:nth-child(4) { animation-delay: 0.4s; }
+</style>

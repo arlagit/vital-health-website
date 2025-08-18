@@ -1,0 +1,139 @@
+---
+// Coming Soon page for Vital Health NZ
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon - Vital Health NZ</title>
+  <meta name="description" content="Vital Health NZ - Professional telehealth services launching soon. Weight management and lifestyle medicine with qualified doctors.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom styling -->
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .pulse-slow {
+      animation: pulse 3s infinite;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    .fade-in-up-delay {
+      animation: fadeInUp 1s ease-out 0.5s both;
+    }
+    
+    .fade-in-up-delay-2 {
+      animation: fadeInUp 1s ease-out 1s both;
+    }
+  </style>
+</head>
+
+<body class="gradient-bg min-h-screen flex items-center justify-center px-4">
+  <div class="max-w-2xl mx-auto text-center text-white">
+    
+    <!-- Logo/Brand -->
+    <div class="fade-in-up mb-8">
+      <div class="w-20 h-20 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+        </svg>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">
+        Vital Health NZ
+      </h1>
+    </div>
+
+    <!-- Coming Soon Message -->
+    <div class="fade-in-up-delay mb-8">
+      <h2 class="text-xl md:text-2xl font-light mb-6 text-white/90">
+        Professional Telehealth Services
+      </h2>
+      <p class="text-lg md:text-xl mb-8 text-white/80 leading-relaxed">
+        We're launching soon with comprehensive weight management and lifestyle medicine services. 
+        <br class="hidden md:block">
+        Qualified doctors, evidence-based treatment, and personalised care.
+      </p>
+    </div>
+
+    <!-- Features Preview -->
+    <div class="fade-in-up-delay-2 mb-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+          <div class="w-12 h-12 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold mb-2">Qualified Doctors</h3>
+          <p class="text-sm text-white/80">MCNZ registered medical professionals</p>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+          <div class="w-12 h-12 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold mb-2">Weight Management</h3>
+          <p class="text-sm text-white/80">GLP-1 medications & lifestyle medicine</p>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+          <div class="w-12 h-12 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
+              <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold mb-2">Telehealth</h3>
+          <p class="text-sm text-white/80">Convenient online consultations</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="fade-in-up-delay-2">
+      <p class="text-white/60 mb-6">
+        Launching Soon • Based in New Zealand
+      </p>
+      
+      <!-- Loading Animation -->
+      <div class="flex justify-center mb-8">
+        <div class="flex space-x-2">
+          <div class="w-3 h-3 bg-white/60 rounded-full pulse-slow"></div>
+          <div class="w-3 h-3 bg-white/60 rounded-full pulse-slow" style="animation-delay: 0.5s"></div>
+          <div class="w-3 h-3 bg-white/60 rounded-full pulse-slow" style="animation-delay: 1s"></div>
+        </div>
+      </div>
+
+      <p class="text-sm text-white/50">
+        © 2025 Vital Health NZ. Professional telehealth services.
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>
