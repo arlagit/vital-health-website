@@ -45,8 +45,8 @@ Let's examine the actual numbers most New Zealand patients are paying for Wegovy
 
 **Monthly medication costs** range from $450-$600, depending on your pharmacy choice:
 
-- **Major pharmacy chains**: Typically at the higher end of this range
-- **Independent pharmacies**: May offer more competitive pricing - worth comparing
+- **Major pharmacy chains**: Often offer competitive pricing (e.g., Chemist Warehouse: $459)
+- **Independent pharmacies**: May charge higher rates ($540-565) - worth comparing
 - **Online pharmacy services**: Can be cost-effective, but verify legitimacy and licensing
 
 Unlike many medications subsidised by PHARMAC, Wegovy currently receives no government funding, meaning patients pay the full commercial price.
@@ -95,9 +95,9 @@ Consider cost-per-kilogram calculations: Clinical trials demonstrate average wei
 
 Location within New Zealand may influence pricing, though differences are typically modest:
 
-**Major centres** (Auckland, Wellington, Christchurch) generally offer more pharmacy options, potentially creating price competition. Multiple providers allow for comparison shopping.
+**Major centres** (Auckland, Wellington, Christchurch) generally offer access to major chains like Chemist Warehouse that provide competitive pricing ($459). Multiple providers allow for comparison shopping.
 
-**Smaller towns** may have fewer pharmacy choices, potentially limiting negotiation opportunities. However, some independent pharmacies prioritise customer relationships and may offer flexible arrangements.
+**Smaller towns** may rely more on independent pharmacies, which typically charge higher rates ($540-565). However, online ordering from major chains can provide access to competitive pricing nationwide.
 
 **Rural areas** occasionally face additional distribution costs due to logistics and inventory frequency, though this varies by location.
 
@@ -171,7 +171,7 @@ If you've decided Wegovy's potential benefits justify the financial commitment:
 
 ## Summary and Outlook
 
-Wegovy represents a significant monthly investment in New Zealand, typically requiring $450-$600 for medication plus consultation costs. The absence of PHARMAC subsidy means patients currently bear full treatment costs.
+Wegovy represents a significant monthly investment in New Zealand, typically requiring $450-$600 for medication plus consultation costs. The absence of Absence of PHARMAC subsidy means patients currently bear full treatment costs.
 
 For individuals with obesity who haven't achieved lasting success with other approaches, this investment may provide substantial health and quality of life returns. Success depends on realistic expectations, adequate financial planning, and comprehensive lifestyle support.
 
