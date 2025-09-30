@@ -21,7 +21,7 @@ const treatmentOptions = [
   },
   {
     name: 'Medical Weight Management',
-    description: 'Evidence-based medical interventions when clinically appropriate and prescribed by qualified doctors',
+    description: 'Evidence-based medical interventions including weight loss medications when clinically appropriate and prescribed by qualified doctors based on individual consultation outcomes',
     benefits: ['Prescription medications when needed', 'Regular monitoring', 'Side effect management', 'Ongoing medical support', 'Unlimited messaging support 9-5 weekdays']
   }
 ];
@@ -31,13 +31,13 @@ const treatmentOptions = [
   <Navigation />
   
   <!-- Hero Section -->
-  <section class="bg-gradient-to-br from-accent-50 to-accent-100 section-padding">
+  <section class="bg-gradient-primary section-padding">
     <div class="container-max text-center">
-      <div class="inline-block bg-accent-100 text-accent-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+      <div class="inline-block bg-primary-100 text-primary-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
         🏥 Doctor-Led Lifestyle Medicine
       </div>
       <h1 class="text-4xl lg:text-6xl font-bold text-neutral-900 mb-8 leading-tight">
-        Comprehensive Weight Management with <span class="text-accent-600">Lifestyle Medicine</span>
+        Comprehensive Weight Management with <span class="text-primary-600">Lifestyle Medicine</span>
       </h1>
       <p class="text-xl lg:text-2xl text-neutral-600 max-w-4xl mx-auto leading-loose">
         Evidence-based weight management combining comprehensive lifestyle medicine with medical supervision. 
@@ -47,15 +47,15 @@ const treatmentOptions = [
       <!-- Key stats -->
       <div class="grid grid-cols-3 gap-4 mt-8">
         <div class="text-center">
-          <div class="text-2xl font-bold text-accent-600">Evidence-Based</div>
+          <div class="text-2xl font-bold text-primary-600">Evidence-Based</div>
           <div class="text-sm text-neutral-600">Medical approach</div>
         </div>
         <div class="text-center">
-          <div class="text-2xl font-bold text-accent-600">$195 + GST</div>
-          <div class="text-sm text-neutral-600">25-minute consultation + unlimited messaging support 9-5 weekdays</div>
+          <div class="text-2xl font-bold text-primary-600">$195 + GST</div>
+          <div class="text-sm text-neutral-600">comprehensive 25-minute session plus unlimited messaging support with our medical team during business hours (9-5 weekdays) for one month</div>
         </div>
         <div class="text-center">
-          <div class="text-2xl font-bold text-accent-600">MCNZ Registered</div>
+          <div class="text-2xl font-bold text-primary-600">MCNZ Registered</div>
           <div class="text-sm text-neutral-600">Qualified doctors</div>
         </div>
       </div>
@@ -91,8 +91,8 @@ const treatmentOptions = [
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         {features.map((feature) => (
           <div class="flex items-start space-x-4">
-            <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-              <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+            <div class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
               </svg>
             </div>
@@ -101,73 +101,12 @@ const treatmentOptions = [
         ))}
         
         <!-- Pricing callout -->
-        <div class="mt-8 p-6 bg-accent-50 rounded-xl">
+        <div class="mt-8 p-6 bg-primary-50 rounded-xl text-center">
           <h3 class="text-xl font-bold text-neutral-900 mb-4">Transparent Pricing</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <div class="text-lg font-semibold text-accent-600">All Consultations</div>
-              <div class="text-2xl font-bold text-neutral-900">$195 + GST</div>
-              <div class="text-sm text-neutral-600">25-minute comprehensive assessment & treatment + unlimited messaging support 9-5 weekdays</div>
-            </div>
-            <div>
-              <div class="text-lg font-semibold text-accent-600">Ongoing Support</div>
-              <div class="text-2xl font-bold text-neutral-900">$195 + GST</div>
-              <div class="text-sm text-neutral-600">25-minute monitoring & treatment adjustments + unlimited messaging support 9-5 weekdays</div>
-            </div>
-          </div>
+          <div class="text-lg font-semibold text-primary-600 mb-2">All Consultations</div>
+          <div class="text-2xl font-bold text-neutral-900 mb-2">$195 + GST</div>
+          <div class="text-sm text-neutral-600 max-w-lg mx-auto">comprehensive 25-minute session plus unlimited messaging support with our medical team during business hours (9-5 weekdays) for one month</div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Medications -->
-  <section class="section-padding bg-gradient-primary">
-    <div class="container-max">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
-          Medical Weight Loss Medications
-        </h2>
-        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
-          When lifestyle changes alone aren't enough, we can provide medical interventions to support your weight management journey
-        </p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {treatmentOptions.map((med, index) => (
-          <div class={`card ${index === 0 ? 'ring-2 ring-accent-500' : ''}`}>
-            {index === 0 && (
-              <div class="bg-accent-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-                Most Prescribed
-              </div>
-            )}
-            <div class="text-center mb-6">
-              <h3 class="text-2xl font-bold text-neutral-900 mb-2">{med.name}</h3>
-              <div class="text-3xl font-bold text-accent-600">{index === 0 ? '$467-512' : index === 1 ? '$130-200' : '$510-615'}</div>
-              <div class="text-sm text-neutral-500">per month (including needles)</div>
-            </div>
-            <p class="text-neutral-600 mb-6 leading-relaxed">{med.description}</p>
-            <h4 class="text-lg font-semibold text-neutral-900 mb-3">Key Benefits:</h4>
-            <ul class="space-y-2 mb-6">
-              {med.benefits.map((benefit) => (
-                <li class="flex items-center space-x-3">
-                  <div class="w-5 h-5 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg class="w-3 h-3 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                    </svg>
-                  </div>
-                  <span class="text-neutral-700">{benefit}</span>
-                </li>
-              ))}
-            </ul>
-            <a href="/contact" class={`w-full text-center block py-3 px-6 rounded-lg font-semibold transition-colors duration-200 ${
-              index === 0 
-                ? 'bg-accent-600 hover:bg-accent-700 text-white' 
-                : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-700'
-            }`}>
-              Book Consultation
-            </a>
-          </div>
-        ))}
       </div>
     </div>
   </section>
@@ -183,7 +122,7 @@ const treatmentOptions = [
       
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div class="text-center">
-          <div class="w-20 h-20 bg-accent-600 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
             <span class="text-3xl font-bold text-white">1</span>
           </div>
           <h3 class="text-xl font-bold text-neutral-900 mb-3">Assessment</h3>
@@ -191,7 +130,7 @@ const treatmentOptions = [
         </div>
         
         <div class="text-center">
-          <div class="w-20 h-20 bg-accent-600 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
             <span class="text-3xl font-bold text-white">2</span>
           </div>
           <h3 class="text-xl font-bold text-neutral-900 mb-3">Plan</h3>
@@ -199,7 +138,7 @@ const treatmentOptions = [
         </div>
         
         <div class="text-center">
-          <div class="w-20 h-20 bg-accent-600 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
             <span class="text-3xl font-bold text-white">3</span>
           </div>
           <h3 class="text-xl font-bold text-neutral-900 mb-3">Support</h3>
@@ -207,7 +146,7 @@ const treatmentOptions = [
         </div>
         
         <div class="text-center">
-          <div class="w-20 h-20 bg-accent-600 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
             <span class="text-3xl font-bold text-white">4</span>
           </div>
           <h3 class="text-xl font-bold text-neutral-900 mb-3">Success</h3>
@@ -218,12 +157,12 @@ const treatmentOptions = [
   </section>
 
   <!-- CTA Section -->
-  <section class="section-padding bg-accent-600">
+  <section class="section-padding bg-primary-600">
     <div class="container-max text-center">
       <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
         Ready to Start Your Weight Loss Journey?
       </h2>
-      <p class="text-xl text-accent-100 mb-8 max-w-2xl mx-auto">
+      <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
         Book your consultation with our weight management specialist and take the first step towards a healthier you.
       </p>
       <a href="/contact" class="btn-primary text-lg px-8 py-4">
