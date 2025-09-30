@@ -5,63 +5,73 @@ import Footer from '../../components/Footer.astro';
 
 const features = [
   'Comprehensive health assessment and medical history review',
-  'Personalised nutrition and exercise planning with lifestyle medicine focus',
+  'Personalised nutrition and exercise planning with doctor-led lifestyle medicine focus',
   'Lifestyle coaching and behavioural therapy for sustainable habit formation',
-  'Medical weight loss medications when clinically appropriate',
-  'Regular progress monitoring with lifestyle plan adjustments',
-  'Ongoing support and accountability for long-term success'
+  'Medical interventions when clinically appropriate and prescribed by qualified doctors',
+  'Regular progress monitoring with lifestyle medicine plan adjustments',
+  'Ongoing doctor-led support and accountability for long-term success',
+  'Unlimited messaging support with medical team 9-5 weekdays'
 ];
 
-const medications = [
+const treatmentOptions = [
   {
-    name: 'Wegovy (Semaglutide)',
-    description: 'Weekly injection that helps reduce appetite and increase feelings of fullness',
-    benefits: ['Reduces hunger', 'Increases satiety', 'Improves blood sugar control', 'FDA-approved for weight loss']
+    name: 'Lifestyle Medicine Assessment',
+    description: 'Comprehensive evaluation of diet, exercise, sleep, and stress factors affecting weight',
+    benefits: ['Personalized nutrition plans', 'Exercise prescription', 'Behavioral change support', 'Medical supervision', 'Unlimited messaging support 9-5 weekdays']
   },
   {
-    name: 'Ozempic (Semaglutide)',
-    description: 'Weekly injection primarily for diabetes management with weight loss benefits',
-    benefits: ['Blood sugar control', 'Weight loss support', 'Cardiovascular benefits', 'Well-established safety profile']
+    name: 'Medical Weight Management',
+    description: 'Evidence-based medical interventions when clinically appropriate and prescribed by qualified doctors',
+    benefits: ['Prescription medications when needed', 'Regular monitoring', 'Side effect management', 'Ongoing medical support', 'Unlimited messaging support 9-5 weekdays']
   }
 ];
 ---
 
-<Layout title="Medical Weight Management | GLP-1 Prescriptions Auckland NZ" description="Medical weight management program with GLP-1 medications including Wegovy and Semaglutide. MCNZ doctors, transparent pricing from $149. Start your weight loss journey today.">
+<Layout title="Doctor-Led Lifestyle Medicine Weight Management for Men Over 35 | Vital Health NZ" description="Doctor-led weight management combining lifestyle medicine with medical assessment. Specialized care for men over 35 facing midlife weight challenges, hormone changes, and metabolic issues.">
   <Navigation />
   
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-accent-50 to-accent-100 section-padding">
     <div class="container-max text-center">
       <div class="inline-block bg-accent-100 text-accent-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-        💊 GLP-1 Medications Available
+        🏥 Doctor-Led Lifestyle Medicine
       </div>
-      <h1 class="text-4xl lg:text-6xl font-bold text-neutral-900 mb-6">
-        Medical Weight Management with <span class="text-accent-600">GLP-1</span>
+      <h1 class="text-4xl lg:text-6xl font-bold text-neutral-900 mb-8 leading-tight">
+        Comprehensive Weight Management with <span class="text-accent-600">Lifestyle Medicine</span>
       </h1>
-      <p class="text-xl lg:text-2xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
-        Evidence-based weight loss combining GLP-1 medications with comprehensive lifestyle medicine support. 
-        MCNZ registered doctors providing integrated care that addresses both medication and sustainable lifestyle changes for long-term success.
+      <p class="text-xl lg:text-2xl text-neutral-600 max-w-4xl mx-auto leading-loose">
+        Evidence-based weight management combining comprehensive lifestyle medicine with medical supervision. 
+        MCNZ registered doctors providing integrated care that addresses the root causes of weight challenges through sustainable lifestyle changes and medical support when clinically appropriate.
       </p>
       
       <!-- Key stats -->
       <div class="grid grid-cols-3 gap-4 mt-8">
         <div class="text-center">
-          <div class="text-2xl font-bold text-accent-600">12-15%</div>
-          <div class="text-sm text-neutral-600">Average weight loss</div>
+          <div class="text-2xl font-bold text-accent-600">Evidence-Based</div>
+          <div class="text-sm text-neutral-600">Medical approach</div>
         </div>
         <div class="text-center">
-          <div class="text-2xl font-bold text-accent-600">$149</div>
-          <div class="text-sm text-neutral-600">Initial consultation</div>
+          <div class="text-2xl font-bold text-accent-600">$195 + GST</div>
+          <div class="text-sm text-neutral-600">25-minute consultation + unlimited messaging support 9-5 weekdays</div>
         </div>
         <div class="text-center">
-          <div class="text-2xl font-bold text-accent-600">24hrs</div>
-          <div class="text-sm text-neutral-600">To start treatment</div>
+          <div class="text-2xl font-bold text-accent-600">MCNZ Registered</div>
+          <div class="text-sm text-neutral-600">Qualified doctors</div>
         </div>
       </div>
       <div class="mt-8">
         <a href="/contact" class="btn-accent text-lg px-8 py-4">
           Book Your Consultation
         </a>
+      </div>
+      
+      <!-- Medical Disclaimer -->
+      <div class="mt-8 bg-amber-50 border-l-4 border-amber-500 p-6 rounded-lg">
+        <p class="text-sm text-amber-800">
+          <strong>Important Medical Disclaimer:</strong> This service provides medical consultations and lifestyle medicine support. 
+          Any prescription medications require a proper medical consultation and are only prescribed when clinically appropriate. 
+          Individual results vary and are not guaranteed.
+        </p>
       </div>
     </div>
   </section>
@@ -95,14 +105,14 @@ const medications = [
           <h3 class="text-xl font-bold text-neutral-900 mb-4">Transparent Pricing</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <div class="text-lg font-semibold text-accent-600">Initial Consultation</div>
-              <div class="text-2xl font-bold text-neutral-900">$149</div>
-              <div class="text-sm text-neutral-600">Comprehensive assessment & treatment plan</div>
+              <div class="text-lg font-semibold text-accent-600">All Consultations</div>
+              <div class="text-2xl font-bold text-neutral-900">$195 + GST</div>
+              <div class="text-sm text-neutral-600">25-minute comprehensive assessment & treatment + unlimited messaging support 9-5 weekdays</div>
             </div>
             <div>
-              <div class="text-lg font-semibold text-accent-600">Follow-up Visits</div>
-              <div class="text-2xl font-bold text-neutral-900">$75</div>
-              <div class="text-sm text-neutral-600">Monthly monitoring & medication adjustments</div>
+              <div class="text-lg font-semibold text-accent-600">Ongoing Support</div>
+              <div class="text-2xl font-bold text-neutral-900">$195 + GST</div>
+              <div class="text-sm text-neutral-600">25-minute monitoring & treatment adjustments + unlimited messaging support 9-5 weekdays</div>
             </div>
           </div>
         </div>
@@ -118,12 +128,12 @@ const medications = [
           Medical Weight Loss Medications
         </h2>
         <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
-          When lifestyle changes alone aren't enough, we can prescribe FDA-approved medications to support your weight loss journey
+          When lifestyle changes alone aren't enough, we can provide medical interventions to support your weight management journey
         </p>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {medications.map((med, index) => (
+        {treatmentOptions.map((med, index) => (
           <div class={`card ${index === 0 ? 'ring-2 ring-accent-500' : ''}`}>
             {index === 0 && (
               <div class="bg-accent-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
@@ -154,7 +164,7 @@ const medications = [
                 ? 'bg-accent-600 hover:bg-accent-700 text-white' 
                 : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-700'
             }`}>
-              Get {med.name.split(' ')[0]} Prescription
+              Book Consultation
             </a>
           </div>
         ))}

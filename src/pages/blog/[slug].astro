@@ -10,8 +10,8 @@ import html from 'remark-html';
 
 export async function getStaticPaths() {
   const { blogPosts } = await import('../../data/blog-posts');
-  // Filter out draft posts
-  const publishedPosts = blogPosts.filter(post => !post.draft);
+  // Show all posts including drafts on localhost
+  const publishedPosts = blogPosts;
   return publishedPosts.map((post) => ({
     params: { slug: post.id },
     props: { post },
@@ -20,10 +20,10 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 
-// Get related posts (same category, excluding current post and drafts)
+// Get related posts (same category, excluding current post only)
 const { getPostsByCategory } = await import('../../data/blog-posts');
 const relatedPosts = getPostsByCategory(post.category.toLowerCase().replace(/\s+/g, '-'))
-  .filter(p => p.id !== post.id && !p.draft)
+  .filter(p => p.id !== post.id)
   .slice(0, 3);
 
 // Format date
@@ -39,7 +39,7 @@ const schemaMarkup = {
   "@type": "BlogPosting",
   "headline": post.title,
   "description": post.excerpt,
-  "image": post.image ? `https://vitalhealth.nz/blog/images/social/${post.id}.webp` : undefined,
+  "image": post.image ? `https://vitalhealth.nz${post.image}` : undefined,
   "author": {
     "@type": "Person",
     "name": post.author || "Vital Health NZ"
@@ -63,7 +63,7 @@ const schemaMarkup = {
 };
 ---
 
-<Layout title={post.title} description={post.excerpt} image={`/blog/images/social/${post.id}.webp`}>
+<Layout title={post.title} description={post.excerpt} image={post.image}>
   <!-- Enhanced SEO for Blog Images -->
   <BlogImageSEO post={post} />
   
@@ -82,6 +82,12 @@ const schemaMarkup = {
           </span>
           <span class="text-white">•</span>
           <span class="text-white text-sm">{post.readTime}</span>
+          {post.draft && (
+            <>
+              <span class="text-white">•</span>
+              <span class="text-sm font-medium text-amber-600 bg-amber-100 px-2 py-1 rounded-full">Draft</span>
+            </>
+          )}
         </div>
         
         <h1 class="text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
@@ -112,11 +118,24 @@ const schemaMarkup = {
   <section class="section-padding bg-white">
     <div class="container-max">
       <div class="max-w-4xl mx-auto">
+        <!-- Draft Warning Banner -->
+        {post.draft && (
+          <div class="mb-8 p-4 bg-amber-50 border border-amber-200 rounded-lg">
+            <div class="flex items-center space-x-2">
+              <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+              </svg>
+              <span class="text-amber-800 font-medium">This is a draft article. Content may be incomplete or subject to change.</span>
+            </div>
+          </div>
+        )}
+
         <!-- Featured Image -->
         {post.image && (
           <div class="mb-8">
             <OptimizedBlogImage 
               slug={post.id}
+              imagePath={post.image}
               alt={post.title}
               title={post.title}
               keywords={post.tags}

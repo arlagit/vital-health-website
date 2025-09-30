@@ -5,7 +5,7 @@ export interface Props {
   image?: string;
 }
 
-const { title, description = "Doctor-led telehealth that actually fits real life. We help with weight, men's performance, sleep, and heart risk—starting with a proper check, clear targets, and regular reviews.", image = "/og-image.jpg" } = Astro.props;
+const { title, description = "Doctor-led telehealth that actually fits real life. We help with medical weight management and metabolic health—starting with a proper check, clear targets, and regular reviews.", image = "/og-image.jpg" } = Astro.props;
 
 const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astro.url;
 ---
@@ -48,11 +48,11 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
         "url": "https://vitalhealth.nz",
         "logo": "https://vitalhealth.nz/images/logos/Vital-Health-Logo.png",
         "image": "https://vitalhealth.nz/images/logos/Vital-Health-Logo.png",
-        "description": "Doctor-led telehealth services in New Zealand specializing in weight management, men's health, sleep health, and metabolic risk assessment. MCNZ registered doctors providing GLP-1 prescriptions including Wegovy and Semaglutide.",
+        "description": "Doctor-led telehealth services in New Zealand specializing in medical weight management and metabolic health assessment. MCNZ registered doctors providing lifestyle medicine and medical assessment.",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Auckland",
-          "addressRegion": "Auckland",
+          "addressLocality": "Dunedin",
+          "addressRegion": "Otago",
           "addressCountry": "NZ"
         },
         "geo": {
@@ -67,7 +67,7 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
           },
           {
             "@type": "City",
-            "name": "Auckland"
+            "name": "Dunedin"
           },
           {
             "@type": "City", 
@@ -86,23 +86,20 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
             "name": "Tauranga"
           }
         ],
-        "telephone": "+64-9-123-4567",
 
         "medicalSpecialty": [
           "Weight Management",
           "Endocrinology", 
-          "Men's Health",
-          "Sleep Medicine",
           "Preventive Medicine",
-          "Telemedicine"
+          "Telemedicine",
+          "Lifestyle Medicine"
         ],
         "serviceType": [
           "Telehealth Consultations",
-          "GLP-1 Prescription Services",
+          "Weight Management Services",
           "Medical Weight Management",
-          "Hormone Therapy",
-          "Sleep Disorder Treatment",
-          "Metabolic Health Assessment"
+          "Metabolic Health Assessment",
+          "Lifestyle Medicine"
         ],
         "priceRange": "$$",
         "paymentAccepted": ["Credit Card", "Bank Transfer"],
@@ -115,8 +112,8 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
               "@type": "Offer",
               "itemOffered": {
                 "@type": "MedicalTherapy",
-                "name": "GLP-1 Prescription Online",
-                "description": "Online prescription services for GLP-1 medications including Wegovy, Semaglutide, and Saxenda for medical weight loss"
+                "name": "Medical Weight Management with Lifestyle Medicine Support",
+                "description": "Online prescription services for medical weight management with lifestyle medicine support and comprehensive health coaching"
               },
               "price": "120",
               "priceCurrency": "NZD",
@@ -160,7 +157,7 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
           <!-- Medical compliance -->
           <meta name="robots" content="index, follow">
           <meta name="author" content="Vital Health NZ">
-          <meta name="keywords" content="telehealth, weight management, men's health, sleep health, heart health, New Zealand, online doctor, lifestyle medicine">
+          <meta name="keywords" content="telehealth, weight management, medical weight management, metabolic health, New Zealand, online doctor, lifestyle medicine">
           
           <!-- Additional SEO -->
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -173,6 +170,48 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
   </head>
   <body>
     <slot />
+    
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-neutral-900 text-white p-4 z-50 hidden">
+      <div class="container-max flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-sm">
+          <p>We use cookies to improve your experience and analyze site usage. By continuing to use our site, you consent to our use of cookies. 
+          <a href="/cookie-policy" class="text-accent-400 hover:text-accent-300 underline">Learn more</a></p>
+        </div>
+        <div class="flex gap-2">
+          <button id="cookie-accept" class="bg-accent-600 hover:bg-accent-700 text-white px-4 py-2 rounded text-sm">
+            Accept
+          </button>
+          <button id="cookie-decline" class="bg-neutral-700 hover:bg-neutral-600 text-white px-4 py-2 rounded text-sm">
+            Decline
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Cookie consent functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const cookieConsent = document.getElementById('cookie-consent');
+        const acceptBtn = document.getElementById('cookie-accept');
+        const declineBtn = document.getElementById('cookie-decline');
+        
+        // Check if consent has been given
+        if (!localStorage.getItem('cookieConsent')) {
+          cookieConsent.classList.remove('hidden');
+        }
+        
+        acceptBtn.addEventListener('click', function() {
+          localStorage.setItem('cookieConsent', 'accepted');
+          cookieConsent.classList.add('hidden');
+        });
+        
+        declineBtn.addEventListener('click', function() {
+          localStorage.setItem('cookieConsent', 'declined');
+          cookieConsent.classList.add('hidden');
+        });
+      });
+    </script>
   </body>
 </html>
 

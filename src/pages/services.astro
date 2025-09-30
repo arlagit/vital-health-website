@@ -5,26 +5,26 @@ import Footer from '../components/Footer.astro';
 
 const services = [
   {
-    title: 'GLP-1 Weight Loss Treatment',
-    description: 'Evidence-based GLP-1 medications combined with personalised lifestyle medicine support for optimal results.',
-    longDescription: 'Our specialized GLP-1 weight loss treatment program combines Medsafe-approved medications like Wegovy or Ozempic with comprehensive lifestyle medicine support. We believe medication works best when combined with personalised nutrition, exercise, and behavioural strategies for sustainable, long-term results.',
+    title: 'Medical Weight Management with Lifestyle Medicine Support',
+    description: 'Doctor-led medical weight management combined with personalised lifestyle medicine support for evidence-based care.',
+    longDescription: 'Our specialized doctor-led medical weight management program combines evidence-based medical approaches with comprehensive lifestyle medicine support. We believe medical weight management works best when combined with personalised nutrition, exercise, and behavioural strategies for sustainable, long-term health.',
     icon: 'scale',
     href: '/services/weight-management',
     color: 'from-accent-500 to-accent-600',
     features: [
       'Comprehensive health assessment',
-      'GLP-1 medication prescription',
-      'Medical supervision and monitoring',
+      'Medical weight management prescription',
+      'Doctor-led medical supervision and monitoring',
       'Dose titration and adjustments',
       'Regular progress monitoring',
-      'Ongoing medical support'
+      'Ongoing doctor-led medical support'
     ],
-    price: '$149 initial consultation'
+    price: '$195 + GST consultation (includes unlimited messaging support 9-5 weekdays)'
   },
   {
-    title: 'Lifestyle Medicine Plans',
-    description: 'Comprehensive nutrition, exercise, stress management, and behavioural change strategies that work alongside medication.',
-    longDescription: 'Comprehensive lifestyle medicine support that goes beyond basic advice. We provide personalised nutrition plans, exercise guidance, stress management, sleep optimisation, behavioural change strategies, and ongoing coaching. This holistic approach is essential for maximising your weight loss results and maintaining long-term success.',
+    title: 'Doctor-Led Lifestyle Medicine Plans',
+    description: 'Comprehensive nutrition, exercise, stress management, and behavioural change strategies that work alongside medical weight management.',
+    longDescription: 'Comprehensive doctor-led lifestyle medicine support that goes beyond basic advice. We provide personalised nutrition plans, exercise guidance, stress management, sleep optimisation, behavioural change strategies, and ongoing coaching. This holistic approach is essential for supporting your medical weight management goals and maintaining long-term health.',
     icon: 'heart',
     href: '/services/lifestyle-medicine',
     color: 'from-primary-500 to-primary-600',
@@ -36,7 +36,7 @@ const services = [
       'Sleep optimisation support',
       'Ongoing lifestyle coaching'
     ],
-    price: '$149 initial consultation'
+    price: '$195 + GST consultation (includes unlimited messaging support 9-5 weekdays)'
   },
   {
     title: 'Medical Supervision',
@@ -50,14 +50,13 @@ const services = [
       'Medication management',
       'Side effect assessment',
       'Blood work coordination',
-      'Primary care coordination',
-      'Emergency support access'
+      'Primary care coordination'
     ],
-    price: '$75 follow-up consultation'
+    price: '$195 + GST consultation (includes unlimited messaging support 9-5 weekdays)'
   },
   {
     title: 'Progress Tracking',
-    description: 'Regular assessments, measurements, and lifestyle adjustments to ensure optimal results and long-term success.',
+    description: 'Regular assessments, measurements, and lifestyle adjustments to support your health goals and long-term success.',
     longDescription: 'Comprehensive progress tracking including regular weight measurements, body composition analysis, health metrics monitoring, lifestyle plan adjustments, and treatment plan modifications. We use data-driven approaches to optimise your results and ensure continued progress through integrated care.',
     icon: 'chart-bar',
     href: '/services/progress-tracking',
@@ -70,7 +69,7 @@ const services = [
       'Progress reporting',
       'Goal setting and review'
     ],
-    price: '$75 follow-up consultation'
+    price: '$195 + GST consultation (includes unlimited messaging support 9-5 weekdays)'
   }
 ];
 
@@ -78,7 +77,7 @@ const process = [
   {
     step: '1',
     title: 'Initial Assessment',
-    description: 'Comprehensive health evaluation, medical history review, and eligibility assessment for GLP-1 treatment.'
+    description: 'Comprehensive health evaluation, medical history review, and eligibility assessment for medical weight management.'
   },
   {
     step: '2',
@@ -98,18 +97,18 @@ const process = [
 ];
 ---
 
-<Layout title="Weight Loss Treatment Services - Vital Health NZ" description="Specialized weight loss treatment services including GLP-1 medications, lifestyle medicine plans, medical supervision, and comprehensive progress tracking. Doctor-led telehealth care for sustainable weight loss results.">
+<Layout title="Weight Loss Treatment Services - Vital Health NZ" description="Specialised weight loss treatment services including medical weight management with lifestyle medicine support, medical supervision, and comprehensive progress tracking. Doctor-led telehealth care for sustainable weight loss results.">
   <Navigation />
   
   <!-- Hero Section -->
   <section class="relative overflow-hidden bg-gradient-primary">
     <div class="container-max section-padding">
       <div class="text-center max-w-4xl mx-auto">
-        <h1 class="text-4xl lg:text-6xl font-bold text-neutral-900 mb-6">
-          Specialized Weight Loss Treatment Services
+        <h1 class="text-4xl lg:text-6xl font-bold text-neutral-900 mb-8 leading-tight">
+          Medical Weight Management with Lifestyle Medicine Support
         </h1>
-        <p class="text-xl lg:text-2xl text-neutral-700 leading-relaxed mb-8">
-          Comprehensive weight loss treatment combining FDA-approved GLP-1 medications with evidence-based lifestyle medicine. Doctor-led telehealth care for sustainable, long-term results.
+        <p class="text-xl lg:text-2xl text-neutral-700 leading-loose mb-8">
+          Comprehensive weight loss treatment combining evidence-based medical weight management with holistic, non-judgmental lifestyle medicine support. Doctor-led telehealth care for sustainable, long-term results.
         </p>
         <a href="/contact" class="btn-primary text-lg px-8 py-4">
           Book Your Consultation
@@ -126,7 +125,7 @@ const process = [
           Our Weight Loss Treatment Services
         </h2>
         <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
-          Comprehensive weight loss treatment combining medical expertise with lifestyle medicine for sustainable results
+          Comprehensive weight loss treatment combining medical expertise with holistic, non-judgmental lifestyle medicine for sustainable results
         </p>
       </div>
       
@@ -226,7 +225,7 @@ const process = [
           Why Choose Vital Health for Weight Loss Treatment?
         </h2>
         <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
-          Specialized expertise in GLP-1 weight loss treatment with comprehensive lifestyle medicine support
+          Specialised expertise in medical weight management with comprehensive lifestyle medicine support
         </p>
       </div>
       
@@ -239,7 +238,7 @@ const process = [
           </div>
           <h3 class="text-xl font-bold text-neutral-900 mb-3">Medical Expertise</h3>
           <p class="text-neutral-600">
-            Qualified NZ doctors with specialized training in weight loss medicine and GLP-1 treatments.
+            Qualified NZ doctors with specialised training in weight loss medicine and medical weight management treatments.
           </p>
         </div>
         
@@ -264,6 +263,28 @@ const process = [
           <h3 class="text-xl font-bold text-neutral-900 mb-3">Comprehensive Support</h3>
           <p class="text-neutral-600">
             Ongoing medical supervision, lifestyle coaching, and support throughout your weight loss journey.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Scope Clarification -->
+  <section class="section-padding bg-neutral-50">
+    <div class="container-max">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-neutral-200">
+          <h2 class="text-2xl font-bold text-neutral-900 mb-4">
+            Specialist Lifestyle Medicine Services
+          </h2>
+          <p class="text-lg text-neutral-600 mb-4">
+            We provide specialist lifestyle medicine services focused on medical weight management and 
+            metabolic health. Our expert doctors work collaboratively with your healthcare team to 
+            deliver targeted, evidence-based care.
+          </p>
+          <p class="text-neutral-600">
+            <strong>Important:</strong> Your regular GP remains responsible for your ongoing general healthcare needs, 
+            primary care coordination, and other medical conditions outside our specialist scope.
           </p>
         </div>
       </div>

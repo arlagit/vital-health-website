@@ -1,6 +1,7 @@
 ---
 export interface Props {
   slug: string;
+  imagePath?: string;
   alt: string;
   title: string;
   keywords?: string[];
@@ -9,7 +10,7 @@ export interface Props {
   className?: string;
 }
 
-const { slug, alt, title, keywords = [], caption, priority = false, className = "" } = Astro.props;
+const { slug, imagePath, alt, title, keywords = [], caption, priority = false, className = "" } = Astro.props;
 
 // Generate SEO-optimized alt text with target keywords
 const seoAlt = keywords.length > 0 
@@ -22,7 +23,10 @@ const seoTitle = `${title} | Vital Health NZ - Expert Weight Loss Treatment`;
 // Generate keywords for schema markup
 const imageKeywords = keywords.length > 0 
   ? [...keywords, 'New Zealand', 'Vital Health', 'telehealth', 'weight loss'].join(', ')
-  : 'weight loss, GLP-1, New Zealand, Vital Health, telehealth';
+  : 'weight loss, medical weight management, New Zealand, Vital Health, telehealth';
+
+// Use provided imagePath or fallback to slug-based path
+const primaryImage = imagePath || `/blog/images/social/${slug}.webp`;
 
 // Generate responsive image paths
 const desktopWebP = `/blog/images/desktop/${slug}.webp`;
@@ -31,7 +35,7 @@ const mobileWebP = `/blog/images/mobile/${slug}.webp`;
 const mobileJpeg = `/blog/images/mobile/${slug}.jpg`;
 const thumbnailWebP = `/blog/images/thumbnails/${slug}.webp`;
 const thumbnailJpeg = `/blog/images/thumbnails/${slug}.jpg`;
-const socialWebP = `/blog/images/social/${slug}.webp`;
+const socialWebP = imagePath || `/blog/images/social/${slug}.webp`;
 
 // Fallback to current blog structure if optimized images don't exist
 const fallbackImage = `/blog/${slug}.jpg`;
@@ -97,7 +101,7 @@ const fallbackImage = `/blog/${slug}.jpg`;
 <script type="application/ld+json" set:html={JSON.stringify({
   "@context": "https://schema.org",
   "@type": "ImageObject",
-  "@id": `https://vitalhealth.nz/blog/images/social/${slug}.webp`,
+  "@id": `https://vitalhealth.nz${socialWebP}`,
   "url": `https://vitalhealth.nz${socialWebP}`,
   "contentUrl": `https://vitalhealth.nz${socialWebP}`,
   "width": 1200,

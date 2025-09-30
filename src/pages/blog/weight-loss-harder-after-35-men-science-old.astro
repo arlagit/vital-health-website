@@ -1,0 +1,345 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import OptimizedBlogImage from '../../components/OptimizedBlogImage.astro';
+
+const post = {
+  id: 'weight-loss-harder-after-35-men-science',
+  title: 'Weight Loss for Men Over 35 in NZ: A Doctor\'s Guide to Metabolic Health',
+  excerpt: 'Finding it harder to lose weight after 35? A New Zealand doctor explains the science behind metabolic slowdown in Kiwi men and outlines proven strategies for losing fat and building muscle. Learn about effective, medically-guided options.',
+  date: '2024-09-17',
+  category: 'Weight Management',
+  readTime: '10 min read',
+  author: 'Dr Adrian Laurence',
+  tags: ['weight loss', 'men over 35', 'metabolic health', 'testosterone', 'New Zealand', 'doctor guide', 'muscle building'],
+  image: '/blog/images/desktop/man-happy-with-weight-loss-scale.webp',
+};
+
+const pageTitle = post.title;
+const pageDescription = post.excerpt;
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-primary section-padding">
+    <div class="container-max">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="mb-6">
+          <span class="inline-block bg-primary-100 text-primary-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
+            {post.category}
+          </span>
+          <h1 class="text-4xl lg:text-5xl font-bold text-neutral-900 mb-6 leading-tight">
+            {post.title}
+          </h1>
+          <p class="text-xl text-neutral-600 mb-8 leading-relaxed">
+            {post.excerpt}
+          </p>
+        </div>
+        
+        <!-- Article Meta -->
+        <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-neutral-600 mb-8">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+            </svg>
+            <span>{post.author}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+            </svg>
+            <span>{post.date}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+            </svg>
+            <span>{post.readTime}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="section-padding bg-white">
+    <div class="container-max">
+      <div class="max-w-4xl mx-auto">
+        <!-- Featured Image -->
+        <div class="mb-12">
+          <OptimizedBlogImage
+            slug={post.id}
+            imagePath={post.image}
+            alt="Middle-aged man giving thumbs-up next to bathroom scale - representing successful weight management achievement"
+            title="Successful weight loss achievement and monitoring for men over 35"
+            keywords={['weight loss', 'men over 35', 'testosterone', 'metabolism']}
+            className="w-full h-64 lg:h-96 object-cover rounded-2xl shadow-lg"
+          />
+        </div>
+
+        <!-- Article Body -->
+        <div class="prose prose-lg max-w-none">
+          <h2>That stubborn belly fat isn't your imagination—your body really does change after 35</h2>
+          
+          <p>If you've noticed your jeans getting tighter despite eating the same foods and keeping up with your usual activities, you're not alone. Here's what's actually happening: once you hit 35, your testosterone levels start dropping by about 0.4% every year, your muscle mass begins disappearing at an alarming rate, and even if you're keeping active, your mitochondria—those cellular powerhouses that burn energy—become 15-17% less efficient on average.</p>
+
+          <p>These aren't just normal wear and tear from too many beers at the rugby or skipping the gym. We're talking about fundamental biological changes that make traditional "eat less, move more" advice about as useful as a chocolate teapot. This is particularly relevant for us here in New Zealand, where <strong>obesity rates jump significantly after age 34</strong>, and now one in three Kiwi blokes are dealing with weight issues, according to the latest New Zealand Health Survey.</p>
+
+          <div class="bg-primary-50 border-l-4 border-primary-500 p-6 my-8">
+            <p class="text-sm text-neutral-700 italic">
+              <strong>Medical Disclaimer:</strong> This article provides general information only and is not a substitute for individual medical advice. Results vary significantly between individuals—the statistics presented here represent averages from clinical studies. For personalised guidance, book a consultation with a registered medical practitioner.
+            </p>
+          </div>
+
+          <h2>Your metabolism isn't broken—it's been reprogrammed</h2>
+          
+          <h3>The five-way attack on your waistline</h3>
+          
+          <p>Let's talk about what's really going on under the hood. Recent research from 2020-2025 shows that weight gain after 35 isn't just about one thing going wrong—it's like five dominoes falling at once, each making the others worse.</p>
+
+          <p><strong>First up: testosterone.</strong> Remember when you could eat pizza for dinner and still see your abs the next morning? Thank testosterone for that. But from 35 onwards, studies show your levels drop steadily—0.4% annually for total testosterone, and after 40, your free testosterone (the stuff that actually does the work) plummets at 1.3% per year on average. Lower testosterone means more fat storage, especially around your middle, and less muscle-building capacity.</p>
+
+          <p><strong>Then there's the muscle meltdown.</strong> Scientists call it sarcopenia, but basically, you're losing muscle faster than a Black Caps batting collapse. Between 50 and 80, blokes typically lose <strong>30-40% of their muscle mass in studies</strong>. And it's not just any muscle—it's the Type II fibres, the metabolically active ones that burn glucose and keep your metabolism humming. Research shows 10-16% of older adults globally are affected by significant muscle loss.</p>
+
+          <p><strong>Your cellular batteries are dying too.</strong> Those mitochondria I mentioned? Even if you're hitting your 10,000 steps daily, research shows they're still producing 15-17% less ATP (cellular energy) on average. It's like trying to run your car on a battery that won't hold a full charge. Everything becomes harder—your workouts feel tougher, recovery takes longer, and you burn fewer calories doing the same activities.</p>
+
+          <p><strong>Insulin stops listening.</strong> Here's a kicker: even if you're not overweight, studies indicate your insulin sensitivity drops by about 22% as you age. Your body becomes less efficient at processing glucose, declining at 0.9 mmol/min/kg every decade. This happens <strong>regardless of your BMI or activity level</strong>—it's just part of aging, like grey hair or forgetting where you put your keys.</p>
+
+          <p><strong>And growth hormone? Forget about it.</strong> After puberty, growth hormone production drops 14% every decade. Some research suggests it might halve every seven years. By 60, about 35% of men are clinically growth hormone deficient. This "somatopause" particularly affects belly fat accumulation and accelerates muscle loss. Studies suggest optimising growth hormone can reverse 10-20 years of aging effects on body composition—though individual results vary widely.</p>
+
+          <p>Put all these together, and you've got a perfect storm that makes your old tricks for dropping a few kilos about as effective as using a teaspoon to bail out a sinking boat.</p>
+
+          <h2>What actually works (spoiler: it's not what you did in your 20s)</h2>
+          
+          <h3>The new rules of the game</h3>
+          
+          <p>Good news: you can still lose weight and keep it off. Bad news: it requires a more sophisticated approach than cutting carbs and hitting the gym three times a week.</p>
+
+          <p><strong>Let's start with diet.</strong> The latest research from 2020-2025 shows some clear winners. In studies, the Mediterranean diet—think olive oil, fish, vegetables, and yes, even some red wine—achieves about 4.4 kg weight loss on average at two years, with nearly 85% of participants sticking to it. Low-carb approaches do slightly better in trials at 4.7 kg average loss, with an impressive 95% adherence rate at one year, though the benefits tend to plateau after 3-6 months.</p>
+
+          <p>But here's where it gets interesting: intermittent fasting combined with Mediterranean eating specifically targets that stubborn belly fat in studies, reducing visceral adipose tissue by an average of 22.6 cm² and fat mass by 3.3 kg in just 12 weeks. It works by improving insulin sensitivity and getting your circadian rhythms back on track.</p>
+
+          <p><strong>Protein becomes your best mate.</strong> Forget what you knew about protein requirements. After 35, evidence suggests you need <strong>1.2-1.6 grams per kilogram of body weight daily</strong> to prevent muscle loss during weight loss. So if you're 90 kg, that's 108-144 grams of protein daily. Studies show intakes above 1.3 g/kg/day help preserve lean mass when combined with resistance training.</p>
+
+          <p><strong>Exercise needs a rethink too.</strong> Cardio alone won't cut it anymore. Resistance training is non-negotiable—studies show it can reduce body fat by an average of 3.8% and fat mass by 5.3 kg while actually increasing lean mass by 0.8 kg. High-intensity interval training burns more calories per minute (12.6 kcal versus 8.8-9.5 for steady-state), but moderate-intensity exercise shows better long-term adherence in research. The sweet spot? Combine both.</p>
+
+          <p><strong>Sleep and stress aren't optional extras.</strong> Getting less than 7 hours of sleep messes with your hunger hormones—ghrelin goes up, leptin goes down, and your energy expenditure increases by 7%. Sounds good? Not really—studies show you'll eat more and move less the next day. <strong>Circadian disruption alone</strong> can trash your metabolism, regardless of sleep duration. And chronic stress? Research indicates it literally breaks down muscle tissue while promoting belly fat storage through cortisol.</p>
+
+          <h3>Why going it alone is like playing rugby without a team</h3>
+          
+          <p>The research is crystal clear on this one: blokes who get medical supervision achieve <strong>better results in studies</strong> than those who try to go solo. We're not just talking about accountability (though that helps). We're talking about proper medical oversight that makes a real difference.</p>
+
+          <p>The massive Kaiser Permanente study of over 10,000 people found that medically supervised programmes achieve average peak weight loss of 15.3% at 4 months. More importantly, 51.5% of participants maintain at least 5% weight loss at 5 years, and over a third keep off 10% or more. Compare that to DIY dieters who typically regain everything within two years.</p>
+
+          <p>Interestingly, us blokes have some quirks when it comes to weight loss programmes. Research shows about 75% of men prefer to go it alone initially, compared to 44% who choose structured programmes. But here's the thing: once we actually join a programme, studies indicate we're 11% more likely to complete it than women, and we get similar results.</p>
+
+          <p>The medical supervision isn't just about someone checking your weight. It includes medication management (adding an average 2.94 kg extra weight loss in studies), monitoring your labs during rapid weight loss phases, and tracking cardiovascular improvements. Yeah, comprehensive programmes cost $1,000-3,000 upfront, but analyses show they prevent 22 diabetes cases and 30 cardiovascular events per 500 participants over 5 years. That's potentially $28,020 in lifetime healthcare savings for someone starting at 20—though individual results and savings will vary.</p>
+
+          <h2>The medication revolution (and why it's not cheating)</h2>
+          
+
+          <p><strong>But here's the catch:</strong> stop the medication, and the weight typically comes back. Studies show people regain an average of 2.2 kg with some medications, but up to 9.7 kg with others. Within a year of stopping, <strong>two-thirds of the weight loss is typically regained in studies</strong>. And in the real world? Nearly half of people quit within the first year due to side effects, cost, or thinking it's not working fast enough.</p>
+
+          <p>The good news extends beyond just weight loss though. These medications have been shown to reduce major cardiovascular events by 13-14%, cut all-cause mortality by 12%, and improve kidney outcomes by 18% in clinical trials. For blokes over 35, who are already at higher cardiovascular risk, these benefits might be especially valuable—though individual responses vary.</p>
+
+          <p>Age does affect how well they work—research shows a negative correlation between age and weight loss effectiveness. But given the enhanced cardiovascular benefits, they might still be worth considering. Current research shows they work equally well for men and women on average, though we're still learning about how individual metabolic differences affect responses.</p>
+
+          <h2>The reality of weight management in New Zealand</h2>
+          
+          <h3>We've got unique challenges down here</h3>
+          
+          <p>Let's be honest—New Zealand isn't making this easy for us. According to the latest New Zealand Health Survey, we've got the <strong>third-highest adult obesity rate in the OECD</strong> at 33.8% (as of 2024), and it's climbing. For Kiwi blokes, the real danger zone starts at 34, when our obesity rates overtake women's. By the time you hit 50-74, the survey shows nearly 80% of men are overweight or obese (combined).</p>
+
+          <p>The ethnic disparities revealed in the New Zealand Health Survey are stark too. If you're Pacific, there's a 71.3% obesity prevalence. For Māori, it's 50.8%. European/Other ethnicities sit at 31.9%. And if you're in a deprived area? You're 1.6 times more likely to be obese than someone in a wealthy neighbourhood.</p>
+
+          <p>The Ministry of Health pushes their "FAB" approach—Food, Activity, and Behaviour. They want 30 minutes of moderate activity five days a week and 7-9 hours of sleep. About half of Kiwi men (49.6%) meet the activity guidelines, compared to 43.7% of women, according to ministry data. So we're doing okay there, at least.</p>
+
+          <p>The Te Mana Ki Tua specialist service in Counties Manukau shows what's possible with proper support—funded meal replacements, medication support, and a whole team including health coaches, dietitians, social workers, psychologists, and endocrinologists. They even encourage whānau participation and cultural responsiveness.</p>
+
+          <p><strong>But here's the massive problem:</strong> As of September 2025, weight-loss medications remain completely unfunded by PHARMAC for weight management. You're looking at $100-600 monthly out of pocket—costs vary by medication and pharmacy. While some diabetes medications will get funding from July 2025 for diabetes treatment, nothing's been submitted for weight management indications. If you've got private insurance (35.2% of adults), you might be covered. Everyone else? Good luck. And this is on top of 12.9% of adults already skipping GP visits because of cost, according to health survey data.</p>
+
+          <div class="bg-neutral-50 border border-neutral-200 rounded-lg p-4 my-6">
+            <p class="text-sm text-neutral-600 italic">
+              <strong>Note:</strong> PHARMAC funding decisions can change. Check current guidelines at pharmac.govt.nz for the latest information.
+            </p>
+          </div>
+
+          <h2>Telehealth: the game-changer you didn't see coming</h2>
+          
+          <h3>Modern problems need modern solutions</h3>
+          
+          <p>The pandemic forced us all online, and guess what? Studies show virtual weight management works just as well as—sometimes better than—in-person programmes. Videoconferencing programmes achieve an average of 7.4% body weight loss in trials, with 74% of participants hitting that crucial 5% threshold.</p>
+
+          <p>Here's why it works better for many blokes: research shows 100% attendance versus 80% for in-person programmes. No driving across town, no sitting in waiting rooms, no taking time off work. For New Zealand's spread-out population and the 14% who cite transport as a healthcare barrier, this is huge.</p>
+
+          <p>The tech setup is straightforward. You need a good set of wireless scales (that's your main tracking tool), maybe a blood pressure cuff if you've got those issues, an activity tracker if you're into data, and some way to track food—apps or photos work fine. The evidence shows self-monitoring plus human coaching beats apps alone every time.</p>
+
+          <p>The best programmes in studies start intensive—weekly 60-minute sessions for 12 weeks—then taper to monthly maintenance. High-risk patients might need bi-weekly check-ins during maintenance. And those programmes lasting over six months? They show much better long-term results in research.</p>
+
+          <p>The key is making sure everyone can access it. That means platforms that work on any device, phone options for those without video, multilingual materials, and alternatives for people who aren't tech-savvy. Studies show the quality of the relationship with your provider matters more than whether you're meeting in person or through a screen.</p>
+
+          <h2>The hard truth about keeping it off</h2>
+          
+          <h3>It's a marathon, not a sprint</h3>
+          
+          <p>Here's what nobody wants to tell you: research shows only <strong>20% of overweight people successfully maintain 10% weight loss for a year or more</strong>. But those who do succeed? They've cracked a code worth learning.</p>
+
+          <p>The National Weight Control Registry tracks people who've lost an average of 30 kg and kept it off for 5.5 years. Remarkably, 74% are still maintaining at the 10-year mark. After those first tough 2-5 years, data suggests it actually gets easier as new habits become just how you live.</p>
+
+          <p>What do successful maintainers do differently according to the registry? They eat breakfast daily (78% of them), stick to low-calorie, low-fat diets (averaging 1,381 kcal/day), keep consistent eating patterns seven days a week (no "cheat days"), and most critically, they <strong>never stop monitoring</strong>. Three-quarters weigh themselves at least weekly and track their food indefinitely.</p>
+
+          <p>They also move—a lot. Registry data shows an average of an hour a day or 2,621 kcal/week of activity expenditure. And 90% use both diet and exercise, not one or the other.</p>
+
+          <p>For us blokes specifically, research shows we prefer individual approaches over group programmes, focus more on exercise than diet restriction, want straightforward information without complex protocols, and respond better to male-targeted content in blokey environments.</p>
+
+          <p>The bottom line? This isn't a weight problem you fix—it's a chronic condition you manage. Successful maintainers treat their strategies as permanent lifestyle changes. They stay vigilant for small 2-3 pound gains and act immediately, before it becomes a bigger problem.</p>
+
+          <h2>Time to get real about your options</h2>
+          
+          <p>Look, the science is clear. After 35, your body is working against you in ways that make your old weight-loss tricks obsolete. The combination of testosterone decline, muscle loss, mitochondrial dysfunction, insulin resistance, and growth hormone deficiency creates a metabolic environment where "just eat less and move more" is about as effective as pushing rope uphill.</p>
+
+          <p>But you're not stuffed. The evidence shows that comprehensive approaches work—combining medical supervision, lifestyle medicine, and for some blokes, medication support. Yes, New Zealand's healthcare system makes accessing these treatments challenging and expensive. But the potential cost of not acting—in health terms and actual dollars—is far higher.</p>
+
+          <p>If you're serious about tackling weight after 35, you need to accept a few realities. First, this requires more sophisticated interventions than willpower alone. Second, investing in medical supervision may pay off in both weight loss and long-term health—though individual results vary. Third, this is a permanent change, not a temporary fix. And finally, we need systemic healthcare changes to make evidence-based treatments accessible to all Kiwis, not just those who can afford them.</p>
+
+          <p>The path forward is clear. It's time to stop treating weight gain after 35 as a personal failure and start treating it as the medical condition it is.</p>
+
+          <div class="bg-primary-100 rounded-2xl p-8 my-12 text-center">
+            <h3 class="text-2xl font-bold text-neutral-900 mb-4">Ready to take control of your weight?</h3>
+            <p class="text-lg text-neutral-700 mb-6">
+              Book your consultation today and discover how our doctor-led programme combines lifestyle medicine with cutting-edge treatments tailored for men over 35.
+            </p>
+            <a href="/contact" class="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-200">
+              Book Your Consultation
+            </a>
+          </div>
+
+          <div class="bg-neutral-50 border border-neutral-200 rounded-lg p-6 my-8">
+            <p class="text-sm text-neutral-600">
+              <strong>Medical Disclaimer:</strong> This article provides general information only and is not a substitute for individual medical advice. Results vary significantly between individuals. The statistics presented represent averages from clinical studies and may not reflect your individual experience. Not all interventions discussed are appropriate for everyone. For personalised guidance, book a consultation with a registered medical practitioner.
+            </p>
+            <p class="text-sm text-neutral-500 mt-2">
+              Information accurate as of September 2025. PHARMAC funding and healthcare policies may change—always check current guidelines.
+            </p>
+          </div>
+
+          <h2>References</h2>
+          
+          <div class="text-sm text-neutral-600 space-y-2">
+            <p>Berg, E., et al. (2025). Discontinuing glucagon‐like peptide‐1 receptor agonists and body habitus: A systematic review and meta‐analysis. <em>Obesity Reviews</em>, 26(1), e13929.</p>
+            
+            <p>Centers for Disease Control and Prevention. (2024). Weight loss in short-term interventions for physical activity and nutrition among adults with overweight or obesity: A systematic review and meta-analysis. <em>Preventing Chronic Disease</em>, 21, E23.</p>
+            
+            <p>Cerdó, T., et al. (2023). Epidemiology of sarcopenia: Prevalence, risk factors, and consequences. <em>Metabolism - Clinical and Experimental</em>, 144, 155533.</p>
+            
+            
+            <p>Johnson, K. C., et al. (2021). A review of telemedicine interventions for weight loss. <em>Current Cardiovascular Risk Reports</em>, 15(9), 17.</p>
+            
+            <p>Ministry of Health NZ. (2023). <em>Clinical guidelines for weight management in New Zealand adults</em>. Wellington: Ministry of Health.</p>
+            
+            <p>Ministry of Health NZ. (2024). <em>Annual update of key results 2023/24: New Zealand Health Survey</em>. Wellington: Ministry of Health.</p>
+            
+            <p>Nature Communications. (2021). Impact of aging and exercise on skeletal muscle mitochondrial capacity, energy metabolism, and physical function. <em>Nature Communications</em>, 12, 4773.</p>
+            
+            <p>Nature Reviews Endocrinology. (2022). The role of insufficient sleep and circadian misalignment in obesity. <em>Nature Reviews Endocrinology</em>, 19(2), 82-97.</p>
+            
+            <p>Nutrients. (2024). Lifestyle medicine for obesity in the era of highly effective anti-obesity treatment. <em>Nutrients</em>, 17(14), 2382.</p>
+            
+            <p>Ogrodnik, M., et al. (2015). Cluster analysis of the National Weight Control Registry to identify distinct subgroups maintaining successful weight loss. <em>Obesity</em>, 23(10), 2050-2057.</p>
+            
+            <p>Pharmac. (2025). <em>Medical weight management treatments</em>. Wellington: Pharmaceutical Management Agency.</p>
+            
+            <p>PubMed Central. (2018). Real-world effectiveness of a medically supervised weight management program in a large integrated health care delivery system: Five-year outcomes. <em>The Permanente Journal</em>, 22, 17-160.</p>
+            
+            <p>PubMed Central. (2021). Hormonal and metabolic changes of aging and the influence of lifestyle modifications. <em>Mayo Clinic Proceedings</em>, 96(4), 788-814.</p>
+            
+            <p>PubMed Central. (2024). Age-related testosterone decline: Mechanisms and intervention strategies. <em>Reproductive Biology and Endocrinology</em>, 22(1), 316.</p>
+            
+            <p>Shai, I., et al. (2008). Weight loss with a low-carbohydrate, Mediterranean, or low-fat diet. <em>New England Journal of Medicine</em>, 359(3), 229-241.</p>
+            
+            <p>The American Journal of Clinical Nutrition. (2005). Long-term weight loss maintenance. <em>The American Journal of Clinical Nutrition</em>, 82(1), 222S-225S.</p>
+            
+            <p>The Lancet Diabetes & Endocrinology. (2024). Effects of medical weight management treatments on kidney and cardiovascular disease outcomes: A meta-analysis of randomised controlled trials. <em>The Lancet Diabetes & Endocrinology</em>, 12(11), 785-796.</p>
+            
+            <p>University of Illinois Chicago. (2023). Is weight loss sustained after discontinuation of medical weight management treatments for obesity? <em>Drug Information Group Bulletin</em>.</p>
+            
+            <p>Williams, R. L., et al. (2015). Effectiveness of weight loss interventions – is there a difference between men and women: A systematic review. <em>Obesity Reviews</em>, 16(2), 171-186.</p>
+          </div>
+        </div>
+
+        <!-- Tags -->
+        <div class="mt-12 pt-8 border-t border-neutral-200">
+          <div class="flex flex-wrap gap-2">
+            {post.tags.map((tag) => (
+              <span class="inline-block bg-neutral-100 text-neutral-700 text-sm px-3 py-1 rounded-full">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-gradient-primary">
+    <div class="container-max text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-6">
+        Ready to Start Your Weight Management Journey?
+      </h2>
+      <p class="text-xl text-neutral-600 mb-8 max-w-3xl mx-auto">
+        Get personalised medical support with our doctor-led telehealth programme designed specifically for men over 35.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-200">
+          Book Your Consultation
+        </a>
+        <a href="/how-it-works" class="btn-secondary text-lg px-8 py-4 hover:shadow-lg transition-all duration-200">
+          How It Works
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Weight Loss for Men Over 35 in NZ: A Doctor's Guide to Metabolic Health",
+  "description": "Finding it harder to lose weight after 35? A New Zealand doctor explains the science behind metabolic slowdown in Kiwi men and outlines proven strategies for losing fat and building muscle. Learn about effective, medically-guided options.",
+  "image": "https://vitalhealth.nz/blog/images/desktop/man-happy-with-weight-loss-scale.webp",
+  "author": {
+    "@type": "Person",
+    "name": "Dr Adrian Laurence",
+    "jobTitle": "Clinical Director & General Practitioner",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Vital Health NZ"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vital Health NZ",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://vitalhealth.nz/images/logos/Vital-Health-Logo.png"
+    }
+  },
+  "datePublished": "2024-09-17",
+  "dateModified": "2024-09-17",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://vitalhealth.nz/blog/weight-loss-harder-after-35-men-science"
+  },
+  "keywords": ["weight loss", "men over 35", "testosterone", "metabolism", "lifestyle medicine", "medical weight management", "New Zealand"],
+  "articleSection": "Weight Management",
+  "wordCount": 3500,
+  "timeRequired": "PT12M"
+}
+</script>

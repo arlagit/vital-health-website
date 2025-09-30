@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Cookie Policy";
+const pageDescription = "Information about how we use cookies and similar technologies on our website.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-primary section-padding">
+    <div class="container-max text-center">
+      <h1 class="text-4xl lg:text-6xl font-bold text-neutral-900 mb-6">
+        Cookie Policy
+      </h1>
+      <p class="text-xl lg:text-2xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
+        How we use cookies and similar technologies to improve your experience
+      </p>
+    </div>
+  </section>
+
+  <!-- Cookie Policy Content -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="max-w-4xl mx-auto prose prose-lg">
+        <h2>What Are Cookies?</h2>
+        <p>
+          Cookies are small text files that are stored on your device when you visit our website. 
+          They help us provide you with a better experience by remembering your preferences and 
+          understanding how you use our site.
+        </p>
+
+        <h2>How We Use Cookies</h2>
+        <p>We use cookies for the following purposes:</p>
+        <ul>
+          <li><strong>Essential Cookies:</strong> Required for the website to function properly</li>
+          <li><strong>Analytics Cookies:</strong> Help us understand how visitors use our website</li>
+          <li><strong>Preference Cookies:</strong> Remember your settings and preferences</li>
+          <li><strong>Security Cookies:</strong> Help protect against fraud and maintain security</li>
+        </ul>
+
+        <h2>Types of Cookies We Use</h2>
+        
+        <h3>Essential Cookies</h3>
+        <p>
+          These cookies are necessary for the website to function and cannot be switched off. 
+          They are usually only set in response to actions made by you which amount to a request 
+          for services, such as setting your privacy preferences, logging in, or filling in forms.
+        </p>
+
+        <h3>Analytics Cookies</h3>
+        <p>
+          These cookies allow us to count visits and traffic sources so we can measure and 
+          improve the performance of our site. They help us to know which pages are the most 
+          and least popular and see how visitors move around the site.
+        </p>
+
+        <h3>Functional Cookies</h3>
+        <p>
+          These cookies enable the website to provide enhanced functionality and personalisation. 
+          They may be set by us or by third party providers whose services we have added to our pages.
+        </p>
+
+        <h2>Third-Party Cookies</h2>
+        <p>
+          Some cookies on our site are set by third-party services. We use these services to 
+          improve our website's functionality and user experience. These third parties may use 
+          cookies to collect information about your activities on this and other websites.
+        </p>
+
+        <h2>Managing Your Cookie Preferences</h2>
+        <p>
+          You can control and/or delete cookies as you wish. You can delete all cookies that 
+          are already on your computer and you can set most browsers to prevent them from being 
+          placed. If you do this, however, you may have to manually adjust some preferences every 
+          time you visit a site and some services and functionalities may not work.
+        </p>
+
+        <h3>Browser Settings</h3>
+        <p>Most web browsers allow you to control cookies through their settings preferences. 
+        You can set your browser to:</p>
+        <ul>
+          <li>Block all cookies</li>
+          <li>Allow only first-party cookies</li>
+          <li>Delete cookies when you close your browser</li>
+          <li>Ask for permission before setting cookies</li>
+        </ul>
+
+        <h2>Cookie Consent</h2>
+        <p>
+          When you first visit our website, we will ask for your consent to use non-essential 
+          cookies. You can change your cookie preferences at any time by clicking the "Cookie 
+          Settings" link in our website footer.
+        </p>
+
+        <h2>Updates to This Policy</h2>
+        <p>
+          We may update this Cookie Policy from time to time to reflect changes in our practices 
+          or for other operational, legal, or regulatory reasons. We will notify you of any 
+          material changes by posting the new policy on our website.
+        </p>
+
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions about our use of cookies, please contact us at:
+        </p>
+        <p>
+          <strong>Email:</strong> admin@healthhealth.co.nz<br>
+          <strong>Address:</strong> Vital Health, PO Box 2293, South Dunedin, Dunedin 9012
+        </p>
+
+        <p class="text-sm text-neutral-500 mt-8">
+          <strong>Effective Date:</strong> January 1, 2024<br>
+          <strong>Last Updated:</strong> January 1, 2024
+        </p>
+      </div>
+    </section>
+
+  <Footer />
+</Layout>

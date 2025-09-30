@@ -1,0 +1,216 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Patient Rights";
+const pageDescription = "Your rights as a patient receiving healthcare services from Vital Health NZ.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-primary section-padding">
+    <div class="container-max text-center">
+      <h1 class="text-4xl lg:text-6xl font-bold text-neutral-900 mb-6">
+        Your Patient Rights
+      </h1>
+      <p class="text-xl lg:text-2xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
+        Understanding your rights as a patient receiving healthcare services
+      </p>
+    </div>
+  </section>
+
+  <!-- Patient Rights Content -->
+  <section class="section-padding bg-white">
+    <div class="container-max">
+      <div class="max-w-4xl mx-auto prose prose-lg">
+        <h2>Your Rights Under the Code of Health and Disability Services Consumers' Rights</h2>
+        <p>
+          As a patient of Vital Health NZ, you have specific rights under New Zealand's Code of 
+          Health and Disability Services Consumers' Rights. These rights are designed to ensure 
+          you receive safe, high-quality healthcare services.
+        </p>
+
+        <h2>Right 1: Respect</h2>
+        <p>
+          You have the right to be treated with respect and dignity, regardless of your age, 
+          gender, race, religion, sexual orientation, or any other personal characteristic.
+        </p>
+        <ul>
+          <li>To be treated as an individual</li>
+          <li>To have your cultural values and beliefs respected</li>
+          <li>To be free from discrimination</li>
+          <li>To be treated with courtesy and consideration</li>
+        </ul>
+
+        <h2>Right 2: Fair Treatment</h2>
+        <p>
+          You have the right to be free from discrimination, coercion, harassment, and sexual, 
+          financial, or other exploitation.
+        </p>
+        <ul>
+          <li>To receive services without discrimination</li>
+          <li>To be free from harassment or coercion</li>
+          <li>To be protected from exploitation</li>
+          <li>To have your privacy respected</li>
+        </ul>
+
+        <h2>Right 3: Dignity and Independence</h2>
+        <p>
+          You have the right to have services provided in a way that respects your dignity and 
+          independence.
+        </p>
+        <ul>
+          <li>To maintain your independence where possible</li>
+          <li>To be involved in decisions about your care</li>
+          <li>To have your preferences considered</li>
+          <li>To receive services that support your dignity</li>
+        </ul>
+
+        <h2>Right 4: Proper Standards</h2>
+        <p>
+          You have the right to have services provided with reasonable care and skill, and in 
+          a manner that complies with legal, professional, ethical, and other relevant standards.
+        </p>
+        <ul>
+          <li>To receive care from qualified professionals</li>
+          <li>To have services provided according to professional standards</li>
+          <li>To receive appropriate treatment for your condition</li>
+          <li>To have your care regularly reviewed and updated</li>
+        </ul>
+
+        <h2>Right 5: Communication</h2>
+        <p>
+          You have the right to effective communication in a form, language, and manner that 
+          enables you to understand the information provided.
+        </p>
+        <ul>
+          <li>To receive information in a way you can understand</li>
+          <li>To have an interpreter if needed</li>
+          <li>To ask questions and receive answers</li>
+          <li>To have information explained clearly</li>
+        </ul>
+
+        <h2>Right 6: Information</h2>
+        <p>
+          You have the right to the information that a reasonable consumer, in that consumer's 
+          circumstances, would expect to receive.
+        </p>
+        <ul>
+          <li>To know what services are available</li>
+          <li>To understand the costs involved</li>
+          <li>To know about any risks or side effects</li>
+          <li>To receive information about your condition and treatment options</li>
+        </ul>
+
+        <h2>Right 7: Informed Consent</h2>
+        <p>
+          You have the right to make an informed choice and give informed consent, except where 
+          the law provides otherwise.
+        </p>
+        <ul>
+          <li>To be fully informed before making decisions</li>
+          <li>To understand the benefits and risks of treatment</li>
+          <li>To ask questions about your treatment</li>
+          <li>To change your mind about treatment</li>
+        </ul>
+
+        <h2>Right 8: Support</h2>
+        <p>
+          You have the right to have one or more support persons of your choice present, except 
+          where safety may be compromised or another consumer's rights may be unreasonably infringed.
+        </p>
+        <ul>
+          <li>To have a support person present during consultations</li>
+          <li>To choose who supports you</li>
+          <li>To have your support person's presence respected</li>
+          <li>To receive support in making decisions</li>
+        </ul>
+
+        <h2>Right 9: Teaching and Research</h2>
+        <p>
+          You have the right to be informed of your right to refuse to participate in teaching 
+          or research, and to refuse to participate without affecting the quality of your care.
+        </p>
+        <ul>
+          <li>To know if teaching or research is involved in your care</li>
+          <li>To refuse to participate in teaching or research</li>
+          <li>To have your care quality maintained regardless of your decision</li>
+          <li>To understand the purpose of any teaching or research</li>
+        </ul>
+
+        <h2>Right 10: Complaints</h2>
+        <p>
+          You have the right to complain about any breach of your rights, and to have your 
+          complaint dealt with appropriately.
+        </p>
+        <ul>
+          <li>To make a complaint about any aspect of your care</li>
+          <li>To have your complaint taken seriously</li>
+          <li>To receive a timely response to your complaint</li>
+          <li>To access independent complaint processes if needed</li>
+        </ul>
+
+        <h2>Additional Rights for Telehealth Services</h2>
+        <p>
+          As a telehealth patient, you also have specific rights related to remote healthcare:
+        </p>
+        <ul>
+          <li>To understand the limitations of telehealth consultations</li>
+          <li>To know when in-person care may be necessary</li>
+          <li>To have your privacy protected during video consultations</li>
+          <li>To receive the same quality of care as in-person visits</li>
+          <li>To receive information about appropriate care options</li>
+        </ul>
+
+        <h2>Your Responsibilities</h2>
+        <p>
+          Along with your rights, you also have responsibilities as a patient:
+        </p>
+        <ul>
+          <li>To provide accurate and complete information about your health</li>
+          <li>To follow the treatment plan agreed with your healthcare provider</li>
+          <li>To attend appointments or notify us if you need to reschedule</li>
+          <li>To treat our staff with respect and courtesy</li>
+          <li>To pay for services as agreed</li>
+        </ul>
+
+        <h2>How to Exercise Your Rights</h2>
+        <p>
+          If you feel your rights have not been respected, you can:
+        </p>
+        <ul>
+          <li>Speak directly with your healthcare provider</li>
+          <li>Contact our Patient Rights Officer</li>
+          <li>Make a formal complaint using our complaints procedure</li>
+          <li>Contact the Health and Disability Commissioner</li>
+        </ul>
+
+        <h2>Contact Information</h2>
+        <div class="bg-neutral-50 rounded-lg p-6">
+          <h3>Patient Rights Officer</h3>
+          <p><strong>Email:</strong> admin@healthhealth.co.nz</p>
+          <p><strong>Address:</strong> Vital Health, PO Box 2293, South Dunedin, Dunedin 9012</p>
+        </div>
+
+        <h2>External Support</h2>
+        <p>
+          If you need independent support or advice about your rights:
+        </p>
+        <ul>
+          <li><strong>Health and Disability Commissioner:</strong> 0800 11 22 33</li>
+          <li><strong>Health and Disability Advocacy Service:</strong> 0800 555 050</li>
+          <li><strong>Citizens Advice Bureau:</strong> 0800 367 222</li>
+        </ul>
+
+        <p class="text-sm text-neutral-500 mt-8">
+          <strong>Effective Date:</strong> January 1, 2024<br>
+          <strong>Last Updated:</strong> January 1, 2024
+        </p>
+      </div>
+    </section>
+
+  <Footer />
+</Layout>

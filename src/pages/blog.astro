@@ -4,8 +4,8 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import { blogPosts, getCategories } from '../data/blog-posts';
 
-// Filter out draft posts
-const publishedPosts = blogPosts.filter(post => !post.draft);
+// Show all posts including drafts on localhost
+const publishedPosts = blogPosts;
 const categories = getCategories();
 ---
 
@@ -52,10 +52,10 @@ const categories = getCategories();
                 <div class="bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-lg h-48 mb-6 flex items-center justify-center overflow-hidden">
                   <picture>
                     <source 
-                      srcset={`/blog/images/social/${post.id}.webp`}
+                      srcset={post.image}
                       type="image/webp">
                     <img 
-                      src={`/blog/images/social/${post.id}.webp`}
+                      src={post.image}
                       alt={`${post.title} - ${post.tags && post.tags.length > 0 ? post.tags.slice(0, 2).join(', ') + ' guide' : 'weight loss guide'} for New Zealand patients`}
                       title={`${post.title} | Vital Health NZ`}
                       class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -73,6 +73,12 @@ const categories = getCategories();
                     <span class="text-sm font-medium text-primary-600">{post.category}</span>
                     <span class="text-neutral-400">•</span>
                     <span class="text-sm text-neutral-500">{post.readTime}</span>
+                    {post.draft && (
+                      <>
+                        <span class="text-neutral-400">•</span>
+                        <span class="text-sm font-medium text-amber-600 bg-amber-100 px-2 py-1 rounded-full">Draft</span>
+                      </>
+                    )}
                   </div>
                   
                   <h3 class="text-xl font-bold text-neutral-900 mb-3 line-clamp-2 group-hover:text-primary-600 transition-colors duration-200">

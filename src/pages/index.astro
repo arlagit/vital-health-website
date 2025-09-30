@@ -5,8 +5,8 @@ import Footer from '../components/Footer.astro';
 
 const services = [
   {
-    title: 'GLP-1 Weight Loss Treatment',
-    description: 'Evidence-based GLP-1 medications combined with personalised lifestyle medicine support for optimal results.',
+    title: 'Weight Management Support',
+    description: 'Comprehensive lifestyle medicine approach to weight management with medical supervision and ongoing support.',
     icon: 'scale',
     href: '/services/weight-management',
     color: 'from-accent-500 to-accent-600',
@@ -14,7 +14,7 @@ const services = [
   },
   {
     title: 'Lifestyle Medicine Plans',
-    description: 'Comprehensive nutrition, exercise, stress management, and behavioural change strategies that work alongside medication.',
+    description: 'Evidence-based nutrition, exercise, stress management, and behavioural change strategies for sustainable health improvements.',
     icon: 'heart',
     href: '/services/lifestyle-medicine',
     color: 'from-primary-500 to-primary-600',
@@ -22,7 +22,7 @@ const services = [
   },
   {
     title: 'Medical Supervision',
-    description: 'Ongoing medical monitoring and lifestyle coaching from qualified NZ doctors throughout your treatment journey.',
+    description: 'Ongoing medical monitoring and lifestyle coaching from qualified NZ doctors throughout your health journey.',
     icon: 'shield-check',
     href: '/services/medical-supervision',
     color: 'from-secondary-500 to-secondary-600',
@@ -30,7 +30,7 @@ const services = [
   },
   {
     title: 'Progress Tracking',
-    description: 'Regular assessments, measurements, and lifestyle adjustments to ensure optimal results and long-term success.',
+    description: 'Regular health assessments, measurements, and lifestyle adjustments to support your health goals and long-term success.',
     icon: 'chart-bar',
     href: '/services/progress-tracking',
     color: 'from-purple-500 to-purple-600',
@@ -40,44 +40,44 @@ const services = [
 
 const faqs = [
   {
-    question: 'What are GLP-1 medications?',
-    answer: 'GLP-1 medications like Wegovy and Ozempic are Medsafe-approved treatments that help with weight loss by reducing appetite and improving blood sugar control. They work by mimicking natural hormones that signal fullness to your brain. However, we believe medication works best when combined with comprehensive lifestyle medicine support.'
+    question: 'What is lifestyle medicine?',
+    answer: 'Lifestyle medicine is an evidence-based approach that uses therapeutic lifestyle interventions to prevent, treat, and manage chronic diseases. It focuses on nutrition, physical activity, stress management, sleep, and other lifestyle factors that influence health outcomes.'
   },
   {
-    question: 'Am I eligible for GLP-1 treatment?',
-    answer: 'Eligibility depends on your BMI, medical history, and current health status. Our doctors will assess if GLP-1 medications are appropriate for you during your consultation.'
+    question: 'What health conditions can you help with?',
+    answer: 'We provide comprehensive support for medical weight management and metabolic health. Our doctors can assess your health status and provide guidance on lifestyle interventions and medical weight management options that may be appropriate for your individual needs.'
   },
   {
-    question: 'How much weight can I expect to lose?',
-    answer: 'Results vary, but clinical studies show average weight loss of 10-15% of body weight over 6-12 months when combined with lifestyle changes. Individual results depend on adherence to treatment and lifestyle recommendations.'
+    question: 'What can I expect from a consultation?',
+    answer: 'During your consultation, our doctor will review your health history, discuss your health goals, and provide evidence-based recommendations for lifestyle changes. If appropriate, they may discuss medical interventions, but all treatment decisions are made based on your individual health needs and in consultation with you.'
   },
   {
     question: 'What lifestyle support do you provide?',
-    answer: 'We provide comprehensive lifestyle medicine that goes beyond basic advice. This includes personalised nutrition plans, exercise guidance, stress management, sleep optimization, behavioural change strategies, and ongoing coaching support. We believe this holistic approach is essential for maximising your weight loss results and maintaining long-term success.'
+    answer: 'We provide comprehensive lifestyle medicine support including personalised nutrition plans, exercise guidance, stress management, sleep optimization, behavioural change strategies, and ongoing coaching. This holistic approach addresses the root causes of health issues and builds sustainable habits for long-term success.'
   },
   {
-    question: 'Is telehealth safe for weight loss treatment?',
-    answer: 'Yes, our telehealth platform is secure and HIPAA compliant. We maintain the same high standards as in-person care, with qualified NZ doctors providing comprehensive medical supervision throughout your treatment.'
+    question: 'Is telehealth safe for healthcare consultations?',
+    answer: 'Yes, our telehealth platform is secure and HIPAA compliant. We maintain the same high standards as in-person care, with qualified NZ doctors providing comprehensive medical supervision. However, some conditions may require in-person assessment.'
   },
   {
-    question: 'Why do you combine medication with lifestyle medicine?',
-    answer: 'Research shows that GLP-1 medications work best when combined with lifestyle changes. Medication helps with appetite control and metabolism, while lifestyle medicine addresses the root causes of weight gain and builds sustainable habits. This dual approach leads to better results, faster weight loss, and long-term success.'
+    question: 'Why do you focus on lifestyle medicine?',
+    answer: 'Research shows that lifestyle interventions can be highly effective for preventing and managing many chronic health conditions. By addressing the root causes of health issues through evidence-based lifestyle changes, we can help you achieve sustainable health improvements and reduce reliance on medications where appropriate.'
   },
   {
-    question: 'How much does treatment cost?',
-    answer: 'Initial consultations are $149 for a comprehensive 30-minute session, with follow-up appointments at $75. GLP-1 medication costs vary and are not included in consultation fees. We\'ll provide transparent pricing during your consultation.'
+    question: 'How much does consultation cost?',
+    answer: 'All consultations are $195 + GST for a comprehensive 25-minute session, which includes unlimited messaging support 9-5 weekdays. Any additional costs for tests or medical interventions will be discussed transparently during your consultation.'
   }
 ];
 
 const trustSignals = [
   { text: 'MCNZ Registered Doctors', icon: 'shield-check' },
-  { text: 'Medsafe-Approved Medications', icon: 'check-circle' },
   { text: 'Evidence-Based Care', icon: 'academic-cap' },
-  { text: 'Lifestyle Medicine Focus', icon: 'heart' }
+  { text: 'Lifestyle Medicine Focus', icon: 'heart' },
+  { text: 'Secure Telehealth Platform', icon: 'lock-closed' }
 ];
 ---
 
-<Layout title="Vital Health NZ - GLP-1 Weight Loss Treatment & Lifestyle Medicine" description="Specialized telehealth weight loss treatment with GLP-1 medications and comprehensive lifestyle medicine support. Doctor-led care for sustainable weight loss results.">
+<Layout title="Vital Health NZ - Lifestyle Medicine & Health & Wellness Support" description="Specialized telehealth health and wellness support with comprehensive lifestyle medicine. Doctor-led care for sustainable health improvements and weight management.">
   <Navigation />
   
   <!-- Hero Section -->
@@ -88,11 +88,11 @@ const trustSignals = [
         <div class="space-y-6 text-left">
           <h1 class="text-4xl lg:text-5xl font-bold text-neutral-900 leading-tight">
             Complete 
-            <span class="text-gradient">Weight Loss Treatment</span>
-            with GLP-1 & Lifestyle Medicine
+            <span class="text-gradient">Medical Weight Loss Management</span>
+            with Lifestyle Medicine
           </h1>
           <p class="text-lg lg:text-xl text-neutral-700 leading-relaxed max-w-2xl">
-            Doctor-led telehealth combining Medsafe-approved GLP-1 medications with comprehensive lifestyle medicine support for sustainable weight loss success.
+            Doctor-led telehealth providing comprehensive, holistic, and non-judgmental lifestyle medicine support for sustainable health improvements and weight management.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <a href="/contact" class="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-200">
@@ -107,11 +107,11 @@ const trustSignals = [
         <!-- Hero Image - Right Side -->
         <div class="relative lg:ml-8">
           <picture>
-            <source srcset="/blog/images/social/hero-image.webp" type="image/webp">
+            <source srcset="/images/hero/lifestyle-medicine-couple-cooking.webp" type="image/webp">
             <img 
-              src="/blog/images/social/hero-image.webp" 
-              alt="Vital Health NZ - Professional Weight Loss Treatment with GLP-1 Medications"
-              title="Doctor-led telehealth weight loss treatment in New Zealand"
+              src="/images/hero/lifestyle-medicine-couple-cooking.webp" 
+              alt="Vital Health NZ - Healthy Lifestyle Medicine and Wellness Support"
+              title="Doctor-led telehealth lifestyle medicine and health & wellness support in New Zealand"
               class="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
               loading="eager"
               decoding="async"
@@ -140,10 +140,10 @@ const trustSignals = [
     <div class="container-max">
       <div class="text-center mb-16">
         <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
-          Our Holistic Weight Loss Treatment Approach
+          Our Holistic Health & Wellness Approach
         </h2>
         <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
-          We believe medication alone isn't enough. Our comprehensive approach combines GLP-1 medications with evidence-based lifestyle medicine, personalised nutrition, exercise guidance, and behavioural support for sustainable, long-term weight loss success.
+          We believe in addressing the root causes of health issues through evidence-based lifestyle medicine. Our open-minded, holistic approach combines personalised nutrition, exercise guidance, stress management, and behavioural support in a non-judgmental environment for sustainable, long-term health improvements.
         </p>
       </div>
       
@@ -201,10 +201,10 @@ const trustSignals = [
     <div class="container-max">
       <div class="text-center mb-16">
         <h2 class="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
-          How Our Holistic Weight Loss Treatment Works
+          How Our Holistic Health & Wellness Program Works
         </h2>
         <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
-          Our comprehensive approach combines medication with lifestyle medicine for sustainable results in four integrated steps
+          Our comprehensive approach uses evidence-based lifestyle medicine for sustainable health improvements in four integrated steps
         </p>
       </div>
       
@@ -215,7 +215,7 @@ const trustSignals = [
           </div>
           <h3 class="text-xl font-bold text-neutral-900 mb-3">Initial Assessment</h3>
           <p class="text-neutral-600">
-            Complete health questionnaire and book consultation. We'll assess your eligibility for GLP-1 treatment and understand your lifestyle goals.
+            Complete health questionnaire and book consultation. We'll assess your health status and understand your wellness goals.
           </p>
         </div>
         
@@ -225,7 +225,7 @@ const trustSignals = [
           </div>
           <h3 class="text-xl font-bold text-neutral-900 mb-3">Medical Consultation</h3>
           <p class="text-neutral-600">
-            Meet your doctor via secure video call. Review health history, discuss goals, and create a personalised treatment plan combining medication with lifestyle medicine.
+            Meet your doctor via secure video call. Review health history, discuss goals, and create a personalised wellness plan focusing on lifestyle medicine interventions.
           </p>
         </div>
         
@@ -233,9 +233,9 @@ const trustSignals = [
           <div class="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
             <span class="text-3xl font-bold text-white">3</span>
           </div>
-          <h3 class="text-xl font-bold text-neutral-900 mb-3">Treatment & Support</h3>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Wellness Plan & Support</h3>
           <p class="text-neutral-600">
-            Receive GLP-1 prescription if eligible, plus comprehensive lifestyle medicine plan including nutrition, exercise, and behavioural strategies with ongoing coaching support.
+            Receive comprehensive lifestyle medicine plan including nutrition, exercise, stress management, and behavioural strategies with ongoing coaching support tailored to your needs.
           </p>
         </div>
         
@@ -245,7 +245,7 @@ const trustSignals = [
           </div>
           <h3 class="text-xl font-bold text-neutral-900 mb-3">Ongoing Care</h3>
           <p class="text-neutral-600">
-            Regular follow-ups to monitor progress, adjust treatment, refine lifestyle strategies, and ensure safe, effective weight loss results for long-term success.
+            Regular follow-ups to monitor progress, adjust wellness strategies, and provide ongoing support to help you achieve and maintain your health goals for long-term success.
           </p>
         </div>
       </div>
@@ -266,8 +266,31 @@ const trustSignals = [
           Frequently Asked Questions
         </h2>
         <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
-          Get answers to common questions about our holistic approach combining GLP-1 weight loss treatment with comprehensive lifestyle medicine support
+          Get answers to common questions about our holistic approach to health and wellness through evidence-based lifestyle medicine
         </p>
+        
+        <!-- Important Disclaimer -->
+        <div class="bg-amber-50 border border-amber-200 rounded-lg p-6 max-w-4xl mx-auto mt-8">
+          <div class="flex items-start space-x-3">
+            <svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+            </svg>
+            <div>
+              <h3 class="font-semibold text-amber-800 mb-2">Important Medical Disclaimer</h3>
+              <p class="text-sm text-amber-700">
+                <strong>Prescription medications require a valid prescription from a registered medical practitioner.</strong> 
+                Our doctors may prescribe medications when clinically appropriate, but all treatment decisions are made 
+                based on individual health assessments and in consultation with you. This website provides educational 
+                information only and does not constitute medical advice.
+              </p>
+              <p class="text-sm text-amber-700 mt-3">
+                <strong>Specialist Services:</strong> We provide specialist lifestyle medicine services focused on weight management, 
+                medical weight management and metabolic risk assessment. Your regular GP remains responsible for your 
+                ongoing general healthcare needs and primary care coordination.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       
       <div class="max-w-4xl mx-auto space-y-6">
@@ -305,10 +328,10 @@ const trustSignals = [
   <section class="section-padding bg-primary-600">
     <div class="container-max text-center">
       <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">
-        Stay Updated on Weight Loss & Lifestyle Medicine
+        Stay Updated on Health & Wellness
       </h2>
       <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-        Get the latest GLP-1 research, lifestyle medicine insights, nutrition tips, and exclusive offers delivered to your inbox.
+        Get the latest lifestyle medicine insights, nutrition tips, wellness research, and health updates delivered to your inbox.
       </p>
       
       <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
@@ -367,7 +390,7 @@ const trustSignals = [
       "name": "How much does it cost?",
       "acceptedAnswer": {
         "@type": "Answer", 
-        "text": "We offer transparent, upfront pricing. Initial consultations are $149 for a comprehensive 30-minute session, with follow-up appointments at $75. We also offer package deals for ongoing care programs."
+        "text": "We offer transparent, upfront pricing. All consultations are $195 + GST for a comprehensive 25-minute session, which includes unlimited messaging support 9-5 weekdays. We also offer package deals for ongoing care programs."
       }
     },
     {

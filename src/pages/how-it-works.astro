@@ -8,7 +8,7 @@ const steps = [
     number: '1',
     icon: 'calendar',
     title: 'Initial Assessment & Consultation',
-    description: 'Book your consultation and complete a comprehensive health questionnaire to assess your eligibility for GLP-1 weight loss treatment and understand your lifestyle goals.',
+    description: 'Book your consultation and complete a comprehensive health questionnaire to assess your eligibility for medical weight management with lifestyle medicine support and understand your health goals.',
     details: [
       'Select your preferred appointment time',
       'Complete detailed health questionnaire',
@@ -19,11 +19,11 @@ const steps = [
   {
     number: '2',
     icon: 'clipboard',
-    title: 'Medical Consultation & Evaluation',
-    description: 'Meet with your MCNZ-registered doctor via secure video call for a comprehensive assessment of your weight loss goals, medical eligibility, and lifestyle factors.',
+    title: 'Doctor-Led Medical Consultation & Evaluation',
+    description: 'Meet with your MCNZ-registered doctor via secure video call for a comprehensive assessment of your weight loss goals, medical weight management eligibility, and lifestyle medicine factors.',
     details: [
       'Secure, HIPAA-compliant video platform',
-      '45-60 minute comprehensive consultation',
+      '30 minute comprehensive consultation',
       'Medical history review and physical assessment',
       'Discussion of weight loss goals and expectations'
     ]
@@ -31,12 +31,12 @@ const steps = [
   {
     number: '3',
     icon: 'document-text',
-    title: 'Personalized Treatment Plan',
-    description: 'Receive your customized weight loss treatment plan, including GLP-1 medication prescription if eligible and comprehensive lifestyle medicine strategies for sustainable success.',
+    title: 'Personalised Treatment Plan',
+    description: 'Receive your customised weight loss treatment plan, including medical weight management prescription if eligible and comprehensive lifestyle medicine strategies for sustainable success.',
     details: [
-      'GLP-1 medication prescription (if eligible)',
-      'Personalized nutrition and exercise plan',
-      'Behavior change strategies and goal setting',
+      'Medical weight management prescription (if eligible)',
+      'Personalised nutrition and exercise plan',
+      'Behaviour change strategies and goal setting',
       'Follow-up appointment scheduling'
     ]
   },
@@ -56,7 +56,7 @@ const steps = [
     number: '5',
     icon: 'chart-bar',
     title: 'Ongoing Care & Progress Tracking',
-    description: 'Continuous support through regular follow-ups, progress monitoring, and lifestyle plan adjustments to ensure optimal results and long-term success.',
+    description: 'Continuous support through regular follow-ups, progress monitoring, and lifestyle plan adjustments to support your health goals and long-term success.',
     details: [
       'Regular follow-up consultations',
       'Weight and health metrics monitoring',
@@ -69,17 +69,17 @@ const steps = [
 const benefits = [
   {
     title: 'Medical Expertise',
-    description: 'Specialized care from qualified NZ doctors with expertise in weight loss medicine and GLP-1 treatments.',
+    description: 'Specialised care from qualified NZ doctors with expertise in weight loss medicine and medical weight management treatments.',
     icon: 'academic-cap'
   },
   {
     title: 'Comprehensive Support',
-    description: 'Combined medical treatment with evidence-based lifestyle medicine for sustainable, long-term weight loss results.',
+    description: 'Combined medical treatment with holistic, evidence-based lifestyle medicine for sustainable, long-term weight loss results.',
     icon: 'heart'
   },
   {
     title: 'Convenience',
-    description: 'No travel time, no waiting rooms. Get specialized weight loss care from anywhere in New Zealand.',
+    description: 'No travel time, no waiting rooms. Get specialised weight loss care from anywhere in New Zealand.',
     icon: 'clock'
   },
   {
@@ -90,7 +90,7 @@ const benefits = [
 ];
 ---
 
-<Layout title="How Our Weight Loss Treatment Works - Vital Health NZ" description="Learn about our comprehensive weight loss treatment process from initial assessment to ongoing care. Doctor-led telehealth treatment with GLP-1 medications and lifestyle support.">
+<Layout title="How Our Weight Loss Treatment Works - Vital Health NZ" description="Learn about our comprehensive weight loss treatment process from initial assessment to ongoing care. Doctor-led telehealth treatment with medical weight management and lifestyle support.">
   <Navigation />
   
   <!-- Hero Section -->
@@ -100,7 +100,7 @@ const benefits = [
         How Our Weight Loss Treatment Works
       </h1>
       <p class="text-xl lg:text-2xl text-neutral-700 leading-relaxed max-w-3xl mx-auto">
-        Simple, secure, and effective weight loss treatment combining GLP-1 medications with comprehensive lifestyle medicine support
+        Simple, secure, and effective weight loss treatment combining medical weight management with comprehensive, non-judgmental lifestyle medicine support
       </p>
     </div>
   </section>
@@ -236,8 +236,8 @@ const benefits = [
                 <span class="text-accent-600 font-semibold text-sm">1</span>
               </div>
               <div>
-                <h4 class="font-semibold text-neutral-900 mb-2">Initial Consultation (Week 1)</h4>
-                <p class="text-neutral-600">Comprehensive assessment and treatment plan development</p>
+                <h4 class="font-semibold text-neutral-900 mb-2">Initial Consultation</h4>
+                <p class="text-neutral-600">Comprehensive assessment and treatment plan development within 24 hours</p>
               </div>
             </div>
             
@@ -246,7 +246,7 @@ const benefits = [
                 <span class="text-accent-600 font-semibold text-sm">2</span>
               </div>
               <div>
-                <h4 class="font-semibold text-neutral-900 mb-2">Treatment Initiation (Weeks 2-4)</h4>
+                <h4 class="font-semibold text-neutral-900 mb-2">Treatment Initiation (Within 24-48 hours)</h4>
                 <p class="text-neutral-600">Medication start, lifestyle plan implementation, and initial support</p>
               </div>
             </div>
@@ -256,7 +256,7 @@ const benefits = [
                 <span class="text-accent-600 font-semibold text-sm">3</span>
               </div>
               <div>
-                <h4 class="font-semibold text-neutral-900 mb-2">Progress Phase (Months 2-6)</h4>
+                <h4 class="font-semibold text-neutral-900 mb-2">Progress Phase (Months 1-6)</h4>
                 <p class="text-neutral-600">Regular monitoring, dose adjustments, and ongoing lifestyle support</p>
               </div>
             </div>
@@ -280,7 +280,7 @@ const benefits = [
               <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
               </svg>
-              <span class="text-neutral-700">Average weight loss of 10-15% of body weight</span>
+              <span class="text-neutral-700">Clinical studies show varying outcomes depending on individual factors</span>
             </div>
             <div class="flex items-center space-x-3">
               <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">

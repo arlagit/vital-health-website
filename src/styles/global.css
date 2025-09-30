@@ -14,7 +14,37 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-bold text-neutral-900;
+    @apply font-serif font-bold text-neutral-900 leading-tight;
+  }
+  
+  h1 {
+    @apply leading-tight;
+  }
+  
+  h2 {
+    @apply leading-tight;
+  }
+  
+  h3 {
+    @apply leading-snug;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+  
+  /* Hero section improvements */
+  .hero-title {
+    @apply leading-tight;
+  }
+  
+  .hero-description {
+    @apply leading-loose;
+  }
+  
+  /* Service card descriptions */
+  .service-description {
+    @apply leading-relaxed;
   }
 }
 
@@ -56,35 +86,35 @@
 
 /* Custom Markdown Styling */
 .prose h1 {
-  @apply text-4xl font-bold text-neutral-900 mb-6 mt-8;
+  @apply text-4xl font-bold text-neutral-900 mb-6 mt-8 leading-tight;
 }
 
 .prose h2 {
-  @apply text-3xl font-bold text-neutral-900 mb-4 mt-8;
+  @apply text-3xl font-bold text-neutral-900 mb-5 mt-8 leading-tight;
 }
 
 .prose h3 {
-  @apply text-2xl font-semibold text-neutral-900 mb-3 mt-6;
+  @apply text-2xl font-semibold text-neutral-900 mb-4 mt-6 leading-snug;
 }
 
 .prose h4 {
-  @apply text-xl font-semibold text-neutral-900 mb-2 mt-4;
+  @apply text-xl font-semibold text-neutral-900 mb-3 mt-5 leading-snug;
 }
 
 .prose p {
-  @apply text-neutral-700 leading-relaxed mb-4;
+  @apply text-neutral-700 leading-relaxed mb-5;
 }
 
 .prose ul {
-  @apply list-disc list-inside mb-4 space-y-2;
+  @apply list-disc list-inside mb-5 space-y-2;
 }
 
 .prose ol {
-  @apply list-decimal list-inside mb-4 space-y-2;
+  @apply list-decimal list-inside mb-5 space-y-2;
 }
 
 .prose li {
-  @apply text-neutral-700;
+  @apply text-neutral-700 leading-relaxed;
 }
 
 .prose strong {
@@ -96,14 +126,27 @@
 }
 
 .prose blockquote {
-  @apply border-l-4 border-primary-200 pl-4 italic text-neutral-600 my-4;
+  @apply border-l-4 border-primary-200 pl-4 italic text-neutral-600 my-6 leading-relaxed;
 }
 
 .prose img {
-  @apply rounded-lg shadow-md my-6;
+  @apply rounded-lg shadow-md my-8;
 }
 
 .prose hr {
-  @apply border-neutral-200 my-8;
+  @apply border-neutral-200 my-10;
+}
+
+/* Additional spacing improvements */
+.prose h1 + p,
+.prose h2 + p,
+.prose h3 + p {
+  @apply mt-2;
+}
+
+.prose p + h2,
+.prose p + h3,
+.prose p + h4 {
+  @apply mt-8;
 }
 
